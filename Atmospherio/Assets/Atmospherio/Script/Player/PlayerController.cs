@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour
     private Vector3 _direction;
 
     private Camera _camera;
-    [SerializeField] private float _maxSizeCamera;
     [SerializeField] private float _minSizeCamera;
+    [SerializeField] private float _maxSizeCamera;
+    
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
