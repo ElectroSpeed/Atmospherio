@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1337165164596198767}
   m_Layer: 0
   m_Name: BlockIron
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1053ce8d9bde01c4a8b5877ae5411a2c, type: 2}
+  - {fileID: 2100000, guid: fab7887e5f2df8942b95d43bcac573e9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
