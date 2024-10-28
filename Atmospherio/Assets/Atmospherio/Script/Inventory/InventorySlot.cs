@@ -14,6 +14,6 @@ public class InventorySlot
 
     public bool IsFull()
     {
-        return _quantity >= _item.maxStack;
+        return _quantity >= _item._maxStack;
     }
 }
