@@ -17,7 +17,7 @@ public class InventoryUI : MonoBehaviour
 
     private void Start()
     {
-        _inventory = FindObjectOfType<Inventory>();
+        _inventory = FindFirstObjectByType<Inventory>();
         GenerateInventoryGrid();
         UpdateUI();
     }
