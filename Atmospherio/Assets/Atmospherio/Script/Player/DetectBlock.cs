@@ -3,7 +3,7 @@ public class DetectBlock : MonoBehaviour
 {
     private Camera _camera;
     [SerializeField] private Transform _posSelect;
-    [SerializeField] private GameObject _blockSelect;
+    public GameObject _blockSelect;
     void Start()
     {
         _camera = Camera.main;
