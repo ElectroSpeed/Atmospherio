@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 913823975811770774}
   - component: {fileID: 3621641362770081067}
   - component: {fileID: 7774188558216008190}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: OxyBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,5 +91,6 @@ MonoBehaviour:
   _icon: {fileID: 0}
   _itemName: OxyBubble
   _itemDescription: 
+  _itemBuilding: {fileID: 0}
   _maxStack: 64
   _count: 0
