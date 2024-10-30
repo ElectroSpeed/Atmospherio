@@ -30,6 +30,8 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             _selectedSlot = _slot;
             _itemUI.transform.parent = _itemUI.transform.root;
         }
+        if (_itemUI._item.gameObject.layer == LayerMask.NameToLayer("Building"))
+            DetectBlock.Instance._isDragging = true;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -48,10 +50,11 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if (_itemUI._item.gameObject.layer == LayerMask.NameToLayer("Building"))
         {
             GameObject blockSelect = DetectBlock.Instance._blockSelect;
-            if (blockSelect != null && blockSelect.CompareTag("Resource"))
+            if (blockSelect != null)
             {
                 BuildingManager.Instance.SpawnBuilding();
                 Destroy(_itemUI.gameObject);
+                DetectBlock.Instance._isDragging = false;
                 return;
             }
         }

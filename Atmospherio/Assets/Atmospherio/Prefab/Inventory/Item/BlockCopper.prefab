@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a540534d63e514882a8606594fdc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _icon: {fileID: -2039915789, guid: c46fa4f064e217649bdf33d593267fd2, type: 3}
   _itemName: Copper
-  _icon: {fileID: 0}
+  _itemDescription: 
   _maxStack: 64
+  _count: 0

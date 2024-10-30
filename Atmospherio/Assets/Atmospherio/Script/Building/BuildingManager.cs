@@ -25,7 +25,9 @@ public class BuildingManager : MonoBehaviour
 
     public void SpawnBuilding()
     {
+        Item item = DetectBlock.Instance._blockSelect.GetComponent<Item>();
         GameObject building = Instantiate(_building, _detectBlock._blockSelect.transform.position + Vector3.up, Quaternion.identity);
-        building.GetComponent<Building>()._itemExtraction = _detectBlock._blockSelect.GetComponent<Item>();
+        building.GetComponent<Building>()._itemExtraction = item;
+        
     }
 }

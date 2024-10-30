@@ -5,6 +5,7 @@ public class DetectBlock : MonoBehaviour
     [SerializeField] private Transform _posSelect;
     public GameObject _blockSelect;
     public static DetectBlock Instance;
+    [HideInInspector] public bool _isDragging;
 
     private void Awake()
     {
@@ -25,19 +26,17 @@ public class DetectBlock : MonoBehaviour
         Debug.DrawLine(posMouse, posMouse + new Vector3(0, -1, 1) * 100, Color.red);
         if (Physics.Raycast(posMouse, new Vector3(0, -1, 1), out RaycastHit hit, 1000f))
         {
-            if (hit.collider.CompareTag("BlockBasic") || hit.collider.gameObject.layer == 6)
+            if ((hit.collider.CompareTag("BlockBasic") || hit.collider.gameObject.layer == 6) && !_isDragging)
             {
                 posSelect.gameObject.SetActive(false);
-                if (_blockSelect != null)
-                    _blockSelect = null;
             }
             else
             {
                 posSelect.gameObject.SetActive(true);
                 float scaleY = hit.collider.transform.localScale.y / 2;
                 posSelect.position = hit.collider.transform.position + new Vector3(0, scaleY, 0);
-                _blockSelect = hit.collider.gameObject;
             }
+            _blockSelect = hit.collider.gameObject;
         }
     }
 }

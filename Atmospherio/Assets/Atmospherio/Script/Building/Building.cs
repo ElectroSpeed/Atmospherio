@@ -31,6 +31,7 @@ public class Building : MonoBehaviour
     private void Start()
     {
         _inventory = FindFirstObjectByType<Inventory>();
+        print(_itemExtraction);
         if (_isExtraction)
         {
             StartCoroutine(Extract());

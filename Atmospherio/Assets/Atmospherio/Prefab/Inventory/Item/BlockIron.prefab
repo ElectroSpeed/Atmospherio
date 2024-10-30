@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a540534d63e514882a8606594fdc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _icon: {fileID: 415404370, guid: 38df0d4d14c0ce945a2d70434a3dfb4a, type: 3}
   _itemName: Iron
-  _icon: {fileID: 0}
+  _itemDescription: 
   _maxStack: 64
+  _count: 0
