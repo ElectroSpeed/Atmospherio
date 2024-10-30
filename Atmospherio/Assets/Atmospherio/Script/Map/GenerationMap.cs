@@ -61,22 +61,22 @@ public class GenerationMap : MonoBehaviour
 
                 if (perlin > _spawnBlockIronMin && perlin < _spawnBlockIronMax)
                 {
-                    Instantiate(_blockIron, new Vector3(x, 0, z), Quaternion.identity, gameObject.transform);
+                    Instantiate(_blockIron, new Vector3(x, 0, z), _blockIron.transform.rotation, gameObject.transform);
                 }
 
                 else if (perlin > _spawnBlockCoalMin && perlin < _spawnBlockCoalMax)
                 {
-                    Instantiate(_blockCoal, new Vector3(x, 0, z), Quaternion.identity, gameObject.transform);
+                    Instantiate(_blockCoal, new Vector3(x, 0, z), _blockCoal.transform.rotation, gameObject.transform);
                 }
 
                 else if (perlin > _spawnBlockCopperMin && perlin < _spawnBlockCopperMax)
                 {
-                    Instantiate(_blockCopper, new Vector3(x, 0, z), Quaternion.identity, gameObject.transform);
+                    Instantiate(_blockCopper, new Vector3(x, 0, z), _blockCopper.transform.rotation, gameObject.transform);
                 }
 
                 else
                 {
-                    Instantiate(_blockBasic, new Vector3(x, 0, z), Quaternion.identity, gameObject.transform);
+                    Instantiate(_blockBasic, new Vector3(x, 0, z), _blockBasic.transform.rotation, gameObject.transform);
                 }
             }
         }
