@@ -3,37 +3,49 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    [SerializeField] GameObject _emptyItem;
     public List<InventorySlot> _slots = new List<InventorySlot>();
-    public int _maxSlots = 20;
+    private InventoryUI _inventoryUI;
 
-    public bool AddItem(Item item, int quantity)
+    public void AddItem(Item item, int quantity)
     {
-        foreach (var slot in _slots)
+        if (_slots.Count == 0)
+        {
+            Debug.LogError("Pas de slots d'inventaire disponibles.");
+            return;
+        }
+
+        foreach (InventorySlot slot in _slots)
         {
             if (slot._item == item && !slot.IsFull())
             {
-                int spaceLeft = item._maxStack - slot._quantity;
-                if (quantity <= spaceLeft)
+                ItemUI childItem = slot.transform.GetChild(0).GetComponent<ItemUI>();
+                int spaceInSlot = item._maxStack - slot._quantity;
+                int toAdd = Mathf.Min(quantity, spaceInSlot);
+                slot._quantity += toAdd;
+                quantity -= toAdd;
+                childItem.SetItem(slot);
+
+                if (quantity <= 0)
                 {
-                    slot._quantity += quantity;
-                    return true;
+                    break;
                 }
-                else
+            }
+            else if (slot.IsEmpty())
+            {
+                GameObject childItem = Instantiate(_emptyItem, slot.transform);
+                int toAdd = Mathf.Min(quantity, item._maxStack);
+                slot._item = item;
+                slot._quantity = toAdd;
+                quantity -= toAdd;
+                childItem.GetComponent<ItemUI>().SetItem(slot);
+
+                if (quantity <= 0)
                 {
-                    slot._quantity = item._maxStack;
-                    quantity -= spaceLeft;
+                    break;
                 }
             }
         }
-
-        while (quantity > 0 && _slots.Count < _maxSlots)
-        {
-            int amountToAdd = Mathf.Min(quantity, item._maxStack);
-            _slots.Add(new InventorySlot(item, amountToAdd));
-            quantity -= amountToAdd;
-        }
-
-        return quantity == 0;
     }
 
     public void RemoveItem(Item item, int quantity)
@@ -42,14 +54,17 @@ public class Inventory : MonoBehaviour
         {
             if (_slots[i]._item == item)
             {
+                ItemUI childItem = _slots[i].transform.GetChild(0).GetComponent<ItemUI>();
                 if (_slots[i]._quantity <= quantity)
                 {
                     quantity -= _slots[i]._quantity;
-                    _slots.RemoveAt(i);
+                    _slots[i].ResetSlot();
+                    Destroy(childItem.gameObject);
                 }
                 else
                 {
                     _slots[i]._quantity -= quantity;
+                    childItem.SetItem(_slots[i]);
                     quantity = 0;
                 }
             }

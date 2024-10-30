@@ -1,9 +1,11 @@
 using UnityEngine;
 
 [System.Serializable]
-public class Item
+public class Item : MonoBehaviour
 {
-    public string _itemName;
     public Sprite _icon;
+    public string _itemName;
+    public string _itemDescription;
     public int _maxStack;
+    public int _count;
 }

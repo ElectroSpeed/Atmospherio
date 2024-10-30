@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c46fa4f064e217649bdf33d593267fd2
+guid: 282fa0d5ee0ba5c478c72a7c8e276dae
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: test_texture_sol_facto_cuivre_0
+      name: slot_inv_facto_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
+        x: 82
+        y: 83
+        width: 860
+        height: 858
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9e6f39ce29e0d84a91a36dbec014d9e
-      internalID: -2039915789
+      spriteID: 9069efdc44c19964cb2f78cc30376a34
+      internalID: 1953267022
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5125c10bf33e9a44cb750187ab88e55f
+    spriteID: 6ea91521f4cc3cd4f85b7d6f294f3319
     internalID: 0
     vertices: []
     indices: 
@@ -132,7 +132,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      test_texture_sol_facto_cuivre_0: -2039915789
+      slot_inv_facto_0: 1953267022
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
