@@ -89,6 +89,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: da88a8d8-412e-4e02-8d9a-74fdd62a421a
     m_ActionName: 'Player/Zoom[/Mouse/scroll/y]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: BuildingManager, Assembly-CSharp
+        m_MethodName: LeftClick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 676d8361-4e09-49d8-bb95-f927c8ab5113
+    m_ActionName: 'Player/LeftClick[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2884009174001428774}
+        m_TargetAssemblyTypeName: Mining, Assembly-CSharp
+        m_MethodName: RightClick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e5dabf91-4fcc-49a6-a2be-214a6615a2cd
+    m_ActionName: 'Player/RightClick[/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -193,6 +225,7 @@ GameObject:
   - component: {fileID: 5922849639686093751}
   - component: {fileID: 6253686579274403089}
   - component: {fileID: 8562074085317127269}
+  - component: {fileID: 2884009174001428774}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -268,7 +301,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4378814154622933179}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 2e6e319c09c8f9647861971b44ce2dc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -298,6 +331,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _posSelect: {fileID: 2564984211820937358}
   _blockSelect: {fileID: 0}
+  _isDragging: 0
+--- !u!114 &2884009174001428774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4378814154622933179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bfe5d2bfa88bc74a8fe48b597f323b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isMining: 0
+  _timeMining: 2
+  _currentTimeMining: 0
 --- !u!1 &6878678307313915948
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,21 +492,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3981481635399522651}
     m_Modifications:
+    - target: {fileID: 1416184733637338872, guid: 9bdf628a822ca854988d102175623284, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 2473570683993705655, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_Name
       value: Select
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalPosition.x
@@ -465,7 +518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalPosition.z
@@ -473,23 +526,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -501,7 +554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
