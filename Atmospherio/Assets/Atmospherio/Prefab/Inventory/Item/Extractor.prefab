@@ -91,6 +91,6 @@ MonoBehaviour:
   _icon: {fileID: 1953267022, guid: 282fa0d5ee0ba5c478c72a7c8e276dae, type: 3}
   _itemName: Extractor
   _itemDescription: 
-  _itemBuilding: {fileID: 1937855980842610565, guid: 66f4e34cef6958244b18a52a47469de4, type: 3}
+  _itemBuilding: {fileID: 6556699169188264438, guid: 220f41fa2f0f91d448426f77375eac5f, type: 3}
   _maxStack: 5
   _count: 0
