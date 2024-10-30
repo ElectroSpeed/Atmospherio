@@ -12,16 +12,6 @@ public class BuildingManager : MonoBehaviour
     {
         Instance = this;
     }
-    public void LeftClick(InputAction.CallbackContext ctx)
-    {
-        if (ctx.performed)
-        {
-            if (_detectBlock._blockSelect != null && _detectBlock._blockSelect.CompareTag("Resource"))
-            {
-                SpawnBuilding();
-            }
-        }
-    }
 
     public void SpawnBuilding()
     {

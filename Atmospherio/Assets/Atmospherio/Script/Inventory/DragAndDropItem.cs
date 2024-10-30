@@ -30,7 +30,7 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             _selectedSlot = _slot;
             _itemUI.transform.parent = _itemUI.transform.root;
         }
-        if (_itemUI._item.gameObject.layer == LayerMask.NameToLayer("Building"))
+        if (_itemUI != null && _itemUI._item.gameObject.layer == LayerMask.NameToLayer("Building"))
             DetectBlock.Instance._isDragging = true;
     }
 

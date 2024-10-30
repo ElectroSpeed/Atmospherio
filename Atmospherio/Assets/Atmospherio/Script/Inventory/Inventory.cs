@@ -41,7 +41,7 @@ public class Inventory : MonoBehaviour
 
             if (quantity <= 0)
             {
-                break;
+                return;
             }
         }
         foreach(InventorySlot slot in slotsEmpty)
@@ -55,7 +55,7 @@ public class Inventory : MonoBehaviour
 
                 if (quantity <= 0)
                 {
-                    break;
+                    return;
                 }
         }
     }
