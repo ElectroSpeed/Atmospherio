@@ -4,6 +4,12 @@ public class DetectBlock : MonoBehaviour
     private Camera _camera;
     [SerializeField] private Transform _posSelect;
     public GameObject _blockSelect;
+    public static DetectBlock Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
         _camera = Camera.main;
