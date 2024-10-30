@@ -15,35 +15,46 @@ public class Inventory : MonoBehaviour
             return;
         }
 
+        List<InventorySlot> slotsEmpty = new List<InventorySlot>();
+        List<InventorySlot> slotsSeemsItem = new List<InventorySlot>();
+
         foreach (InventorySlot slot in _slots)
         {
             if (slot._item == item && !slot.IsFull())
             {
-                ItemUI childItem = slot.transform.GetChild(0).GetComponent<ItemUI>();
-                int spaceInSlot = item._maxStack - slot._quantity;
-                int toAdd = Mathf.Min(quantity, spaceInSlot);
-                slot._quantity += toAdd;
-                quantity -= toAdd;
-                childItem.SetItem(slot);
-
-                if (quantity <= 0)
-                {
-                    break;
-                }
+                slotsSeemsItem.Add(slot);
             }
             else if (slot.IsEmpty())
             {
-                GameObject childItem = Instantiate(_emptyItem, slot.transform);
-                int toAdd = Mathf.Min(quantity, item._maxStack);
-                slot._item = item;
-                slot._quantity = toAdd;
-                quantity -= toAdd;
-                childItem.GetComponent<ItemUI>().SetItem(slot);
+                slotsEmpty.Add(slot);
+            }
+        }
+        foreach (InventorySlot slot in slotsSeemsItem)
+        {
+            ItemUI childItem = slot.transform.GetChild(0).GetComponent<ItemUI>();
+            int spaceInSlot = item._maxStack - slot._quantity;
+            int toAdd = Mathf.Min(quantity, spaceInSlot);
+            slot._quantity += toAdd;
+            quantity -= toAdd;
+            childItem.SetItem(slot);
 
-                if (quantity <= 0)
-                {
-                    break;
-                }
+            if (quantity <= 0)
+            {
+                break;
+            }
+        }
+        foreach(InventorySlot slot in slotsEmpty)
+        {
+            GameObject childItem = Instantiate(_emptyItem, slot.transform);
+            int toAdd = Mathf.Min(quantity, item._maxStack);
+            slot._item = item;
+            slot._quantity = toAdd;
+            quantity -= toAdd;
+            childItem.GetComponent<ItemUI>().SetItem(slot);
+
+            if (quantity <= 0)
+            {
+                break;
             }
         }
     }
