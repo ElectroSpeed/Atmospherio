@@ -9,6 +9,12 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private InventorySlot _slot;
     private InventorySlot _selectedSlot;
     private Transform _parentBeforeDrag;
+    private Inventory _inventory;
+
+    private void Start()
+    {
+        _inventory = FindFirstObjectByType<Inventory>();
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -28,11 +34,28 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (_itemUI == null)
+            return;
+
         _itemUI.transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (_itemUI == null)
+            return;
+
+        if (_itemUI._item.gameObject.layer == LayerMask.NameToLayer("Building"))
+        {
+            GameObject blockSelect = DetectBlock.Instance._blockSelect;
+            if (blockSelect != null && blockSelect.CompareTag("Resource"))
+            {
+                BuildingManager.Instance.SpawnBuilding();
+                Destroy(_itemUI.gameObject);
+                return;
+            }
+        }
+
         InventorySlot targetSlot = eventData.pointerEnter?.GetComponent<InventorySlot>();
         Debug.Log(targetSlot);
         if (targetSlot != null)
