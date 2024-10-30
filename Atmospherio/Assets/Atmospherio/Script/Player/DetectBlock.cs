@@ -19,7 +19,7 @@ public class DetectBlock : MonoBehaviour
         Debug.DrawLine(posMouse, posMouse + new Vector3(0, -1, 1) * 100, Color.red);
         if (Physics.Raycast(posMouse, new Vector3(0, -1, 1), out RaycastHit hit, 1000f))
         {
-            if (!hit.collider.CompareTag("Resource"))
+            if (hit.collider.CompareTag("BlockBasic") || hit.collider.gameObject.layer == 6)
             {
                 posSelect.gameObject.SetActive(false);
                 if (_blockSelect != null)
@@ -28,7 +28,8 @@ public class DetectBlock : MonoBehaviour
             else
             {
                 posSelect.gameObject.SetActive(true);
-                posSelect.position = hit.collider.transform.position + new Vector3(0, 0.52f, 0);
+                float scaleY = hit.collider.transform.localScale.y / 2;
+                posSelect.position = hit.collider.transform.position + new Vector3(0, scaleY, 0);
                 _blockSelect = hit.collider.gameObject;
             }
         }

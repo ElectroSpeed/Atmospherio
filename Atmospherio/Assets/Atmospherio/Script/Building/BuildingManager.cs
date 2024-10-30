@@ -9,7 +9,7 @@ public class BuildingManager : MonoBehaviour
     {
         if (ctx.performed)
         {
-            if (_detectBlock._blockSelect != null)
+            if (_detectBlock._blockSelect != null && _detectBlock._blockSelect.CompareTag("Resource"))
             {
                 GameObject building = Instantiate(_building, _detectBlock._blockSelect.transform.position + Vector3.up, Quaternion.identity);
                 building.GetComponent<Building>()._itemExtraction = _detectBlock._blockSelect.GetComponent<Item>();
