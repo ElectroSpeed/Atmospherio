@@ -26,6 +26,6 @@ public class InventorySlot : MonoBehaviour
 
     public bool IsEmpty()
     {
-        return _item == null;
+        return _item == null || _quantity <= 0;
     }
 }

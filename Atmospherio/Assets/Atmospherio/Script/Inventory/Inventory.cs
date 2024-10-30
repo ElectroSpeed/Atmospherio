@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
 
         foreach (InventorySlot slot in _slots)
         {
-            if (slot._item == item && !slot.IsFull())
+            if (slot._item != null && slot._item._itemName == item._itemName && !slot.IsFull())
             {
                 slotsSeemsItem.Add(slot);
             }
@@ -29,6 +29,7 @@ public class Inventory : MonoBehaviour
                 slotsEmpty.Add(slot);
             }
         }
+
         foreach (InventorySlot slot in slotsSeemsItem)
         {
             ItemUI childItem = slot.transform.GetChild(0).GetComponent<ItemUI>();
@@ -45,17 +46,17 @@ public class Inventory : MonoBehaviour
         }
         foreach(InventorySlot slot in slotsEmpty)
         {
-            GameObject childItem = Instantiate(_emptyItem, slot.transform);
-            int toAdd = Mathf.Min(quantity, item._maxStack);
-            slot._item = item;
-            slot._quantity = toAdd;
-            quantity -= toAdd;
-            childItem.GetComponent<ItemUI>().SetItem(slot);
+                            GameObject childItem = Instantiate(_emptyItem, slot.transform);
+                int toAdd = Mathf.Min(quantity, item._maxStack);
+                slot._item = item;
+                slot._quantity = toAdd;
+                quantity -= toAdd;
+                childItem.GetComponent<ItemUI>().SetItem(slot);
 
-            if (quantity <= 0)
-            {
-                break;
-            }
+                if (quantity <= 0)
+                {
+                    break;
+                }
         }
     }
 
