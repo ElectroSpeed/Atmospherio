@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using UnityEngine;
 
 public class CraftItem : MonoBehaviour
@@ -10,10 +9,19 @@ public class CraftItem : MonoBehaviour
         _inventory = FindFirstObjectByType<Inventory>();
     }
 
-    public void CraftNewItem(Item itemCraft, ComponentCraft[] listComponentForCraft)
+    public void CraftNewItem(CraftReciepe receipe)
     {
-        foreach (ComponentCraft item in listComponentForCraft)
+        foreach (ComponentCraft item in receipe._componentCraftList)
         {
+            if (!_inventory.CheckNumberItem(item._itemComponentCraft, item._quantityComponentCraft))
+            {
+                return;
+            }
         }
+        foreach (ComponentCraft item in receipe._componentCraftList)
+        {
+            _inventory.RemoveItem(item._itemComponentCraft, item._quantityComponentCraft);
+        }
+        _inventory.AddItem(receipe._itemCraft, receipe._itemCraftCount);
     }
 }

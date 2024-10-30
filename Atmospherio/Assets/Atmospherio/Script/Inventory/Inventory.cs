@@ -41,22 +41,42 @@ public class Inventory : MonoBehaviour
 
             if (quantity <= 0)
             {
-                break;
+                return;
             }
         }
         foreach(InventorySlot slot in slotsEmpty)
         {
-                            GameObject childItem = Instantiate(_emptyItem, slot.transform);
-                int toAdd = Mathf.Min(quantity, item._maxStack);
-                slot._item = item;
-                slot._quantity = toAdd;
-                quantity -= toAdd;
-                childItem.GetComponent<ItemUI>().SetItem(slot);
+            GameObject childItem = Instantiate(_emptyItem, slot.transform);
+            int toAdd = Mathf.Min(quantity, item._maxStack);
+            slot._item = item;
+            slot._quantity = toAdd;
+            quantity -= toAdd;
+            childItem.GetComponent<ItemUI>().SetItem(slot);
 
-                if (quantity <= 0)
-                {
-                    break;
-                }
+            if (quantity <= 0)
+            {
+                return;
+            }
+        }
+    }
+    
+    public bool CheckNumberItem(Item item, int requiredCount)
+    {
+        int itemCount = 0;
+        foreach (InventorySlot slot in _slots)
+        {
+            if (slot._item != null && slot._item._itemName == item._itemName)
+            {
+                itemCount += slot._quantity;
+            }
+        }
+        if (itemCount < requiredCount)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
         }
     }
 

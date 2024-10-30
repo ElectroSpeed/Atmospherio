@@ -266,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 294224965}
   - component: {fileID: 294224966}
+  - component: {fileID: 294224967}
   m_Layer: 5
   m_Name: '|OpenInventory|'
   m_TagString: Untagged
@@ -324,10 +325,41 @@ MonoBehaviour:
         m_CallState: 2
   _onEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 520926399}
+        m_TargetAssemblyTypeName: CraftItem, Assembly-CSharp
+        m_MethodName: CraftNewItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 294224967}
+          m_ObjectArgumentAssemblyTypeName: CraftReciepe, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onExit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &294224967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294224964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79dc536c1a26c9408bc512b736a0568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemCraft: {fileID: 7774188558216008190, guid: 980f001ac2b1dd343b5b5f45042e2763, type: 3}
+  _componentCraftList:
+  - _itemComponentCraft: {fileID: 7774188558216008190, guid: c16fcd8fb5406c044bd2eab69da20195, type: 3}
+    _quantityComponentCraft: 10
+  - _itemComponentCraft: {fileID: 7774188558216008190, guid: 55d1e80713fe0924f9a1d85a5d0bf889, type: 3}
+    _quantityComponentCraft: 15
+  _itemCraftCount: 1
 --- !u!1 &520926394
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +372,7 @@ GameObject:
   - component: {fileID: 520926397}
   - component: {fileID: 520926396}
   - component: {fileID: 520926395}
+  - component: {fileID: 520926399}
   m_Layer: 0
   m_Name: InventoryManager
   m_TagString: Untagged
@@ -362,7 +395,7 @@ MonoBehaviour:
   _item:
   - {fileID: 7774188558216008190, guid: 55d1e80713fe0924f9a1d85a5d0bf889, type: 3}
   - {fileID: 7774188558216008190, guid: c16fcd8fb5406c044bd2eab69da20195, type: 3}
-  _number: 100
+  _number: 148
 --- !u!114 &520926396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,6 +446,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1640259898}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &520926399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520926394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe18b027db0d54428e1ef981d5c43ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &529970949
 GameObject:
   m_ObjectHideFlags: 0
