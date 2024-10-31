@@ -88,8 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a540534d63e514882a8606594fdc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 0}
+  _icon: {fileID: 1387883472, guid: debfd200a4f6f1d438e060e0c1b0d0ed, type: 3}
   _itemName: IronIngot
   _itemDescription: 
+  _itemBuilding: {fileID: 0}
   _maxStack: 64
   _count: 0

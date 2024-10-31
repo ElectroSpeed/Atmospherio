@@ -88,8 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a540534d63e514882a8606594fdc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 0}
+  _icon: {fileID: -849858476, guid: 59b12e8e89e17b64591f922182a26fa6, type: 3}
   _itemName: IronPlate
   _itemDescription: 
+  _itemBuilding: {fileID: 0}
   _maxStack: 64
   _count: 0

@@ -88,8 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a540534d63e514882a8606594fdc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 0}
+  _icon: {fileID: -23687967, guid: d1841835260b7244f8a10b906969044d, type: 3}
   _itemName: CopperGear
   _itemDescription: 
+  _itemBuilding: {fileID: 0}
   _maxStack: 64
   _count: 0

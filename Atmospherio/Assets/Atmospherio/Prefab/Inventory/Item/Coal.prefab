@@ -88,8 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a540534d63e514882a8606594fdc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 1967200187, guid: a8c025b0edf4d344492f4bcb77846e3b, type: 3}
+  _icon: {fileID: -142077563, guid: bf32f1a0f39c43d409872ec0fd68a42d, type: 3}
   _itemName: Coal
   _itemDescription: 
+  _itemBuilding: {fileID: 0}
   _maxStack: 32
   _count: 0

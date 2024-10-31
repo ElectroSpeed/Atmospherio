@@ -88,8 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a540534d63e514882a8606594fdc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 0}
+  _icon: {fileID: -937601004, guid: 5a92b3c0ca17d194b9ab46aad2763f21, type: 3}
   _itemName: CopperIngot
   _itemDescription: 
+  _itemBuilding: {fileID: 0}
   _maxStack: 64
   _count: 0
