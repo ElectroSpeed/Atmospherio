@@ -1,10 +1,8 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class BuildingManager : MonoBehaviour
 {
     [SerializeField] private DetectBlock _detectBlock;
-    [SerializeField] private GameObject _building;
 
     public static BuildingManager Instance;
 
@@ -15,7 +13,7 @@ public class BuildingManager : MonoBehaviour
 
     public bool SpawnBuilding(Item itemToBuild)
     {
-        Item item = DetectBlock.Instance._blockSelect.GetComponent<Item>();
+        Item item = _detectBlock._blockSelect.GetComponent<Item>();
         if (itemToBuild._itemName == "Extractor" && item == null)
         {
             return false;
