@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4fc4606140ea0de40a3cc11dd3596092, type: 2}
+  - {fileID: 2100000, guid: 57eb7cc0f60f25d45b22151319c3bf87, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,5 +124,6 @@ MonoBehaviour:
   _icon: {fileID: -2039915789, guid: c46fa4f064e217649bdf33d593267fd2, type: 3}
   _itemName: Copper
   _itemDescription: 
+  _itemBuilding: {fileID: 0}
   _maxStack: 64
   _count: 0
