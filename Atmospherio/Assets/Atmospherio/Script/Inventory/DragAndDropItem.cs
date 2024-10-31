@@ -53,12 +53,14 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             if (blockSelect != null)
             {
                 DetectBlock.Instance._isDragging = false;
+                print(_itemUI._count);
                 if (BuildingManager.Instance.SpawnBuilding(_itemUI._item))
                 {
-                    _itemUI._item._count -= 1;
-                    _itemUI._itemCount.text = _itemUI._item._count.ToString();
-                    if (_itemUI._item._count <= 0)
+                    _itemUI._count -= 1;
+                    _itemUI._itemCount.text = _itemUI._count.ToString();
+                    if (_itemUI._count <= 0)
                     {
+                        print(_itemUI._count);
                         Destroy(_itemUI.gameObject);
                         return;
                     }
