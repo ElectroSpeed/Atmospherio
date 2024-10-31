@@ -6,14 +6,12 @@ using UnityEngine;
 [CustomEditor(typeof(GenerationMap))]
 public class GenerationMapEditor : Editor
 {
-    private int _seed;
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
         if (GUILayout.Button("Generate Map"))
         {
-            _seed = Random.Range(-10000, 10000);
-            (target as GenerationMap).GenerateMap(_seed);
+            (target as GenerationMap).GenerateMap();
             EditorUtility.SetDirty(this);
 
         }
@@ -44,32 +42,38 @@ public class GenerationMap : MonoBehaviour
     [SerializeField] private float _spawnBlockCoalMin;
     [SerializeField] private float _spawnBlockCoalMax;
 
-    [Header("Spawn Block Coal")]
+    [Header("Spawn Block Copper")]
     [SerializeField] private float _spawnBlockCopperMin;
     [SerializeField] private float _spawnBlockCopperMax;
 
 
 
 
-    public void GenerateMap(int seed)
+    public void GenerateMap()
     {
+        int seedIron = Random.Range(-10000, 10000);
+        int seedCoal = Random.Range(-10000, 10000);
+        int seedCopper = Random.Range(-10000, 10000);
+
         for (int z = 0; z < _height; z++)
         {
             for (int x = 0; x < _width; x++)
             {
-                float perlin = Mathf.PerlinNoise(x / 10f + seed, z / 10f + seed);
+                float perlinIron = Mathf.PerlinNoise(x / 10f + seedIron, z / 10f + seedIron);
+                float perlinCoal = Mathf.PerlinNoise(x / 10f + seedCoal, z / 10f + seedCoal);
+                float perlinCopper = Mathf.PerlinNoise(x / 10f + seedCopper, z / 10f + seedCopper);
 
-                if (perlin > _spawnBlockIronMin && perlin < _spawnBlockIronMax)
+                if (perlinIron > _spawnBlockIronMin && perlinIron < _spawnBlockIronMax)
                 {
                     Instantiate(_blockIron, new Vector3(x, 0, z), _blockIron.transform.rotation, gameObject.transform);
                 }
 
-                else if (perlin > _spawnBlockCoalMin && perlin < _spawnBlockCoalMax)
+                else if (perlinCoal > _spawnBlockCoalMin && perlinCoal < _spawnBlockCoalMax)
                 {
                     Instantiate(_blockCoal, new Vector3(x, 0, z), _blockCoal.transform.rotation, gameObject.transform);
                 }
 
-                else if (perlin > _spawnBlockCopperMin && perlin < _spawnBlockCopperMax)
+                else if (perlinCopper > _spawnBlockCopperMin && perlinCopper < _spawnBlockCopperMax)
                 {
                     Instantiate(_blockCopper, new Vector3(x, 0, z), _blockCopper.transform.rotation, gameObject.transform);
                 }
