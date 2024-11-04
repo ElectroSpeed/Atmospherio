@@ -94,3 +94,4 @@ MonoBehaviour:
   _itemBuilding: {fileID: 0}
   _maxStack: 32
   _count: 0
+  _isFuel: 1

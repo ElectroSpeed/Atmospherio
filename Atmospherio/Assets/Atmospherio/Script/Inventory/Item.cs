@@ -8,5 +8,4 @@ public class Item : MonoBehaviour
     public string _itemDescription;
     public GameObject _itemBuilding;
     public int _maxStack;
-    public int _count;
 }

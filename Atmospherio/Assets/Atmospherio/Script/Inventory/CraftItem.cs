@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class CraftItem : MonoBehaviour
@@ -6,7 +7,7 @@ public class CraftItem : MonoBehaviour
 
     private void Start()
     {
-        _inventory = FindFirstObjectByType<Inventory>();
+        _inventory = this.GetComponent<Inventory>();
     }
 
     public void CraftNewItem(CraftReciepe receipe)
