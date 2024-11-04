@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,11 +10,13 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] GameObject _inventorySlotPrefab;
     [SerializeField] Transform _inventoryPanelVisible;
     [SerializeField] Transform _inventoryPanelInvisible;
+    [SerializeField] Transform _inventoryTopPanel;
+    [SerializeField] List<GameObject> _inventoryItems = new();
+
 
     public int _totalSlots;
     public int _slotsPerLine;
     public int _slotInVisiblePanel;
-    public bool _inventoryOpen = false;
 
     public Vector2 _slotSize = new Vector2(100, 100);
     public float _slotSpacing = 0f;
@@ -61,15 +64,11 @@ public class InventoryUI : MonoBehaviour
     }
     public void OpenInventory()
     {
-        if (!_inventoryOpen)
-        {
-            _inventoryPanelInvisible.gameObject.SetActive(true);
-            _inventoryOpen = true;
-        }
-        else
-        {
-            _inventoryPanelInvisible.gameObject.SetActive(false);
-            _inventoryOpen = false;
-        }
+        _inventoryPanelInvisible.gameObject.SetActive(!_inventoryPanelInvisible.gameObject.activeSelf);
+        _inventoryTopPanel.gameObject.SetActive(!_inventoryTopPanel.gameObject.activeSelf);
+    }
+    public void OpenCloseSpecialPanel(int index)
+    {
+        _inventoryItems[index].SetActive(!_inventoryItems[index].activeSelf);
     }
 }
