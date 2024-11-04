@@ -31,7 +31,10 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             _itemUI.transform.parent = _itemUI.transform.root;
         }
         if (_itemUI._item.gameObject.layer == LayerMask.NameToLayer("Building"))
+        {
             DetectBlock.Instance._isDragging = true;
+            BuildingManager.Instance.SetSizeCollider(_itemUI._item);
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -53,7 +56,6 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             if (blockSelect != null)
             {
                 DetectBlock.Instance._isDragging = false;
-                print(_itemUI._count);
                 if (BuildingManager.Instance.SpawnBuilding(_itemUI._item))
                 {
                     _itemUI._count -= 1;
