@@ -95,7 +95,7 @@ MonoBehaviour:
     m_ActionName: 'Player/LeftClick[/Mouse/leftButton]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 567027292816296576}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Mining, Assembly-CSharp
         m_MethodName: RightClick
         m_Mode: 0
@@ -123,7 +123,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8253784722488511433}
-  - component: {fileID: 9034481834194816179}
+  - component: {fileID: 1949122548224034498}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -146,7 +146,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3981481635399522651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &9034481834194816179
+--- !u!212 &1949122548224034498
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -629,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -0.92
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalPosition.z
@@ -637,11 +637,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalRotation.y
@@ -653,7 +653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3720652700525945803, guid: 9bdf628a822ca854988d102175623284, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
