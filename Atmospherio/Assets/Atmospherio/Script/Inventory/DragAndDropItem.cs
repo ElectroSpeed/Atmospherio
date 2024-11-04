@@ -1,20 +1,11 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private ItemUI _itemUI;
     private InventorySlot _slot;
     private InventorySlot _selectedSlot;
-    private Transform _parentBeforeDrag;
-    private Inventory _inventory;
-
-    private void Start()
-    {
-        _inventory = FindFirstObjectByType<Inventory>();
-    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
