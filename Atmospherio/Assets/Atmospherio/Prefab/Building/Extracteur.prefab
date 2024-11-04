@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4429976582918209546}
   - component: {fileID: 7146872926018490309}
   - component: {fileID: 6063730741480377396}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Extracteur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8670778631349782679}
   - component: {fileID: 3422282290463954721}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

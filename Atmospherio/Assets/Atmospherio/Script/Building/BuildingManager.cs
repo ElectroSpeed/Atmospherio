@@ -16,7 +16,7 @@ public class BuildingManager : MonoBehaviour
     public bool SpawnBuilding(Item itemToBuild)
     {
         Item item = _detectBlock._blockSelect.GetComponent<Item>();
-        if (itemToBuild._itemName == "Extractor" && item == null || _collisionDetectionSelect._collisionEnter)
+        if ((itemToBuild._itemName == "Extractor" && item == null) || _collisionDetectionSelect._collisionEnter || item == null)
         {
             return false;
         }
