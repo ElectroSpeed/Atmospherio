@@ -19,6 +19,9 @@ public class Mining : MonoBehaviour
     }
     public void RightClick(InputAction.CallbackContext ctx)
     {
+        if (DetectBlock.Instance._blockSelect == null)
+            return;
+
         if (ctx.performed && DetectBlock.Instance._blockSelect.CompareTag("Resource"))
         {
             _sliderMining.gameObject.SetActive(true);

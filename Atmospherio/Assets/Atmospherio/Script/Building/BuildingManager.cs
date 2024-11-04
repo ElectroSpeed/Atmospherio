@@ -16,7 +16,7 @@ public class BuildingManager : MonoBehaviour
     public bool SpawnBuilding(Item itemToBuild)
     {
         Item item = _detectBlock._blockSelect.GetComponent<Item>();
-        if ((itemToBuild._itemName == "Extractor" && item == null) || _collisionDetectionSelect._collisionEnter || item == null)
+        if ((itemToBuild._itemName == "Extractor" && item == null) || _collisionDetectionSelect._collisionEnter)
         {
             return false;
         }
@@ -26,7 +26,7 @@ public class BuildingManager : MonoBehaviour
     }
     public void SetSizeCollider(Item itemToBuild)
     {
-        
+
         _collisionDetectionSelect.GetComponent<BoxCollider>().size = itemToBuild._itemBuilding.GetComponent<BoxCollider>().size / 1.25f;
     }
 }
