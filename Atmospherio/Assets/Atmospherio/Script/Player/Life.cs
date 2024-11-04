@@ -8,6 +8,8 @@ public class Life : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI _textLife;
 
+    public float _speedRemoveLife;
+
     private void Start()
     {
         SetTextLife();
@@ -77,6 +79,6 @@ public class Life : MonoBehaviour
     }
     public void SetTextLife()
     {
-        _textLife.text = _life.ToString() + " / " + _maxLife.ToString();
+        _textLife.text = ((int)_life).ToString() + " / " + _maxLife.ToString();
     }
 }

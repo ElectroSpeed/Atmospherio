@@ -43,7 +43,7 @@ public class Oxygen : MonoBehaviour
         _oxygen -= amount;
         if (_oxygen < 0)
         {
-            _life.RemoveLife(0.1f);
+            _life.RemoveLife(_life._speedRemoveLife * Time.deltaTime);
             _oxygen = 0;
         }
         SetSlider();
