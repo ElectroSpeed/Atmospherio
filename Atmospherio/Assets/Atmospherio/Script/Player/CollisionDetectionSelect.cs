@@ -22,9 +22,4 @@ public class CollisionDetectionSelect : MonoBehaviour
         _collisionEnter = false;
         _numberEnter = 0;
     }
-    private void Update()
-    {
-        print(_collisionEnter);
-        print(_numberEnter);
-    }
 }

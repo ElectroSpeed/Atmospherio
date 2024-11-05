@@ -23,6 +23,7 @@ public class BuildingCustomEditor : Editor
 public class Building : MonoBehaviour
 {
     public bool _isExtraction;
+    [SerializeField] GameObject _buildingUI;
 
     [HideInInspector] public float _timeConsumption;
 
@@ -31,6 +32,7 @@ public class Building : MonoBehaviour
     private void Start()
     {
         _inventory = FindFirstObjectByType<Inventory>();
+        
         if (_isExtraction)
         {
             StartCoroutine(Extract());

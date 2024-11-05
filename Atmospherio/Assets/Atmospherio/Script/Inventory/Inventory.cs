@@ -80,11 +80,6 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public bool InventoryIsFull()
-    {
-        return true;
-    }
-
     public void RemoveItem(Item item, int quantity)
     {
         for (int i = _slots.Count - 1; i >= 0 && quantity > 0; i--)

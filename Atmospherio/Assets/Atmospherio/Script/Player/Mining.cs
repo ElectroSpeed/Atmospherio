@@ -25,6 +25,10 @@ public class Mining : MonoBehaviour
             _currentBlock = DetectBlock.Instance._blockSelect;
             _isMining = true;
         }
+        else if (ctx.performed && DetectBlock.Instance._blockSelect.CompareTag("Build"))
+        {
+            DetectBlock.Instance._blockSelect.transform.GetChild(0).gameObject.SetActive(true);
+        }
         else if (ctx.canceled)
         {
             _sliderMining.gameObject.SetActive(false);
