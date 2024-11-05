@@ -5,7 +5,7 @@ public class Oxygen : MonoBehaviour
 {
     [SerializeField] private float _oxygen;
     [SerializeField] private float _maxOxygen;
-    [SerializeField] private float _speedRemoveOxygen;
+    public float _speedRemoveOxygen;
 
     [SerializeField] private Slider _oxygenSlider;
     private Life _life;
@@ -18,11 +18,6 @@ public class Oxygen : MonoBehaviour
     private void Start()
     {
         SetSlider();
-    }
-
-    private void Update()
-    {
-        RemoveOxygen(_speedRemoveOxygen * Time.deltaTime);
     }
 
     public void AddOxygen(float amount)
