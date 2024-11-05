@@ -27,7 +27,7 @@ public class Mining : MonoBehaviour
         }
         else if (ctx.performed && DetectBlock.Instance._blockSelect.CompareTag("Build"))
         {
-            DetectBlock.Instance._blockSelect.transform.GetChild(0).gameObject.SetActive(true);
+            Debug.Log("Open Chest");
         }
         else if (ctx.canceled)
         {
