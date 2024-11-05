@@ -19,7 +19,8 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         {
             _slot.ResetSlot();
             _selectedSlot = _slot;
-            _itemUI.transform.parent = _itemUI.transform.root;
+            _itemUI.transform.SetParent(_itemUI.transform.root);
+            _itemUI.transform.SetAsLastSibling();
         }
         if (_itemUI._item.gameObject.layer == LayerMask.NameToLayer("Building"))
         {
@@ -53,7 +54,6 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                     _itemUI._itemCount.text = _itemUI._count.ToString();
                     if (_itemUI._count <= 0)
                     {
-                        print(_itemUI._count);
                         Destroy(_itemUI.gameObject);
                         return;
                     }
@@ -63,7 +63,6 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
 
         InventorySlot targetSlot = eventData.pointerEnter?.GetComponent<InventorySlot>();
-        Debug.Log(targetSlot);
         if (targetSlot != null)
         {
             if (targetSlot.transform.childCount == 0)

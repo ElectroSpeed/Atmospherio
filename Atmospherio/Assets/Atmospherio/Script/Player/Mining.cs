@@ -28,6 +28,10 @@ public class Mining : MonoBehaviour
             _currentBlock = DetectBlock.Instance._blockSelect;
             _isMining = true;
         }
+        else if (ctx.performed && DetectBlock.Instance._blockSelect.CompareTag("Build"))
+        {
+            Debug.Log("Open Chest");
+        }
         else if (ctx.canceled)
         {
             _sliderMining.gameObject.SetActive(false);

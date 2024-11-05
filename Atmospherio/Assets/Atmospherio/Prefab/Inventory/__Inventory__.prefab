@@ -85,7 +85,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7302757113005174445}
   - component: {fileID: 6199637809458118030}
-  - component: {fileID: 4141838112482657877}
   m_Layer: 5
   m_Name: '|InvisibleInventoryPart|'
   m_TagString: Untagged
@@ -120,36 +119,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205551477968045327}
   m_CullTransparentMesh: 1
---- !u!114 &4141838112482657877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205551477968045327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2787807846707849672
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +130,6 @@ GameObject:
   - component: {fileID: 4698882519956932162}
   - component: {fileID: 4000418779904686014}
   - component: {fileID: 439533754897251912}
-  - component: {fileID: 1935889399172941060}
   m_Layer: 0
   m_Name: InventoryManager
   m_TagString: Untagged
@@ -213,28 +181,13 @@ MonoBehaviour:
   _inventorySlotPrefab: {fileID: 4309560238381041099, guid: 6d4a5f85c506bde429d07f143d78bc12, type: 3}
   _inventoryPanelVisible: {fileID: 7594945315902558033}
   _inventoryPanelInvisible: {fileID: 7302757113005174445}
+  _inventoryTopPanel: {fileID: 0}
+  _inventoryItems: []
   _totalSlots: 36
   _slotsPerLine: 9
   _slotInVisiblePanel: 9
-  _inventoryOpen: 0
   _slotSize: {x: 100, y: 100}
   _slotSpacing: 0
---- !u!114 &1935889399172941060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2787807846707849672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22d04706e27c48641903f07de62dd45b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _item:
-  - {fileID: 7774188558216008190, guid: 55d1e80713fe0924f9a1d85a5d0bf889, type: 3}
-  - {fileID: 7774188558216008190, guid: c16fcd8fb5406c044bd2eab69da20195, type: 3}
-  _number: 1000
 --- !u!1 &3791763148227960513
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +270,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7594945315902558033}
   - component: {fileID: 170741225399768746}
-  - component: {fileID: 3754158999624674157}
   m_Layer: 5
   m_Name: '|VisibleInventoryPart|'
   m_TagString: Untagged
@@ -352,36 +304,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4137180776157251025}
   m_CullTransparentMesh: 1
---- !u!114 &3754158999624674157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4137180776157251025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &5083006393991418425
 GameObject:
   m_ObjectHideFlags: 0
