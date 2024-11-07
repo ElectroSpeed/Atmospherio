@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isExtraction: 0
+  _buildingUI: {fileID: 4309560238381041099, guid: 15d1c175c541b5d41a0d442929902611, type: 3}
   _timeConsumption: 2
   _itemExtraction: {fileID: 0}
 --- !u!1 &8131919063569036211
