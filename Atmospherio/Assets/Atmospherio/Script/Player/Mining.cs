@@ -30,7 +30,12 @@ public class Mining : MonoBehaviour
         }
         else if (ctx.performed && DetectBlock.Instance._blockSelect.CompareTag("Build"))
         {
-            Debug.Log("Open Chest");
+            if (_inventory.GetComponent<InventoryUI>()._isOpen)
+            {
+                return;
+            }
+            DetectBlock.Instance._blockSelect.GetComponent<Building>()._interfaceBuild.SetActive(true);
+            _inventory.GetComponent<InventoryUI>().OpenInventory();
         }
         else if (ctx.canceled)
         {

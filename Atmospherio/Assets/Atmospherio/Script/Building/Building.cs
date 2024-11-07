@@ -23,16 +23,22 @@ public class BuildingCustomEditor : Editor
 public class Building : MonoBehaviour
 {
     public bool _isExtraction;
-    [SerializeField] GameObject _buildingUI;
+    [SerializeField] private GameObject _buildingUI;
 
     [HideInInspector] public float _timeConsumption;
 
     [HideInInspector] public Item _itemExtraction;
-    private Inventory _inventory;
+    public Inventory _inventory;
+    public GameObject _interfaceBuild;
     private void Start()
     {
         _inventory = FindFirstObjectByType<Inventory>();
-        
+        if(_buildingUI != null)
+        {
+            _interfaceBuild = Instantiate(_buildingUI);
+            _interfaceBuild.transform.SetParent(_inventory.transform);
+            _interfaceBuild.GetComponent<RectTransform>().localPosition = new Vector3(0, 150, 0);
+        }
         if (_isExtraction)
         {
             StartCoroutine(Extract());
