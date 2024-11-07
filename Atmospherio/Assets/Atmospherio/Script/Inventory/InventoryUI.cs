@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
@@ -12,7 +13,9 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] Transform _inventoryPanelInvisible;
     [SerializeField] Transform _inventoryTopPanel;
     [SerializeField] List<GameObject> _inventoryItems = new();
+    [SerializeField] PlayerInput _playerInput;
 
+    public bool _isOpen = false; 
 
     public int _totalSlots;
     public int _slotsPerLine;
@@ -66,6 +69,15 @@ public class InventoryUI : MonoBehaviour
     {
         _inventoryPanelInvisible.gameObject.SetActive(!_inventoryPanelInvisible.gameObject.activeSelf);
         _inventoryTopPanel.gameObject.SetActive(!_inventoryTopPanel.gameObject.activeSelf);
+        if (_isOpen)
+        {
+            _playerInput.currentActionMap.Enable();
+        }
+        else
+        {
+            _playerInput.currentActionMap.Disable();
+        }
+        _isOpen = !_isOpen;
     }
     public void OpenCloseSpecialPanel(int index)
     {
