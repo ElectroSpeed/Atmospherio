@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 public class Furnace : MonoBehaviour
@@ -11,9 +10,9 @@ public class Furnace : MonoBehaviour
 
     public Slider GetSliderFuel() => _sliderFuel;
     public Slider GetSliderCook() => _sliderCook;
-    [CanBeNull] public InventorySlot GetSlotFuel() => _slotFuel;
-    [CanBeNull] public InventorySlot GetSlotOre() => _slotOre;
-    [CanBeNull] public InventorySlot GetSlotResult() => _slotResult;
+    public InventorySlot GetSlotFuel() => _slotFuel;
+    public InventorySlot GetSlotOre() => _slotOre;
+    public InventorySlot GetSlotResult() => _slotResult;
     
     public void ResetSliderCook()
     {

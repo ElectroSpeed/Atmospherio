@@ -33,6 +33,7 @@ public class GenerationMap : MonoBehaviour
     [SerializeField] private GameObject _blockIron;
     [SerializeField] private GameObject _blockCoal;
     [SerializeField] private GameObject _blockCopper;
+    [SerializeField] private GameObject _tree;
 
     [Header("Spawn Block Iron")]
     [SerializeField] private float _spawnBlockIronMin;
@@ -45,15 +46,18 @@ public class GenerationMap : MonoBehaviour
     [Header("Spawn Block Copper")]
     [SerializeField] private float _spawnBlockCopperMin;
     [SerializeField] private float _spawnBlockCopperMax;
-
-
-
+    
+    [Header("Spawn Tree")]
+    [SerializeField] private float _spawnTreeMin;
+    [SerializeField] private float _spawnTreeMax;
+    
 
     public void GenerateMap()
     {
         int seedIron = Random.Range(-10000, 10000);
         int seedCoal = Random.Range(-10000, 10000);
         int seedCopper = Random.Range(-10000, 10000);
+        int seedTree = Random.Range(-10000, 10000);
 
         for (int z = 0; z < _height; z++)
         {
@@ -62,6 +66,7 @@ public class GenerationMap : MonoBehaviour
                 float perlinIron = Mathf.PerlinNoise(x / 10f + seedIron, z / 10f + seedIron);
                 float perlinCoal = Mathf.PerlinNoise(x / 10f + seedCoal, z / 10f + seedCoal);
                 float perlinCopper = Mathf.PerlinNoise(x / 10f + seedCopper, z / 10f + seedCopper);
+                float perlinTree = Mathf.PerlinNoise(x / 10f + seedTree, z / 10f + seedTree);
 
                 if (perlinIron > _spawnBlockIronMin && perlinIron < _spawnBlockIronMax)
                 {
@@ -76,6 +81,11 @@ public class GenerationMap : MonoBehaviour
                 else if (perlinCopper > _spawnBlockCopperMin && perlinCopper < _spawnBlockCopperMax)
                 {
                     Instantiate(_blockCopper, new Vector3(x, 0, z), _blockCopper.transform.rotation, gameObject.transform);
+                }
+
+                else if (perlinTree > _spawnTreeMin && perlinTree < _spawnTreeMax)
+                {
+                    Instantiate(_tree, new Vector3(x, 0, z), _tree.transform.rotation, gameObject.transform);
                 }
 
                 else
