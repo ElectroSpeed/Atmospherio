@@ -14,14 +14,15 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             _itemUI = this.transform.GetChild(0).GetComponent<ItemUI>();
         }
         _slot = GetComponent<InventorySlot>();
-
-        if (_itemUI != null)
-        {
-            _slot.ResetSlot();
-            _selectedSlot = _slot;
-            _itemUI.transform.SetParent(_itemUI.transform.root);
-            _itemUI.transform.SetAsLastSibling();
-        }
+        
+        if (_itemUI == null)
+            return;
+        
+        _slot.ResetSlot();
+        _selectedSlot = _slot;
+        _itemUI.transform.SetParent(_itemUI.transform.root);
+        _itemUI.transform.SetAsLastSibling();
+        
         if (_itemUI._item.gameObject.layer == LayerMask.NameToLayer("Building"))
         {
             DetectBlock.Instance._isDragging = true;

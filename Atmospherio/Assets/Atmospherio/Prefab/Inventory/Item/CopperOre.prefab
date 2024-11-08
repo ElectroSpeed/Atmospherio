@@ -93,4 +93,5 @@ MonoBehaviour:
   _itemDescription: 
   _itemBuilding: {fileID: 0}
   _maxStack: 64
-  _count: 0
+  _ressourceCook: {fileID: 7774188558216008190, guid: f56dff9678c89564db7a9cbd4650122d, type: 3}
+  _timeCook: 5

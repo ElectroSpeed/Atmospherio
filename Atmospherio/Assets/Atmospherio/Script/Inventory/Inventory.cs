@@ -102,4 +102,5 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+    public GameObject GetEmptyItem() => _emptyItem;
 }
