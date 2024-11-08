@@ -50,7 +50,6 @@ public class GenerationMap : MonoBehaviour
     [Header("Spawn Tree")]
     [SerializeField] private float _spawnTreeMin;
     [SerializeField] private float _spawnTreeMax;
-    
 
     public void GenerateMap()
     {
@@ -72,22 +71,18 @@ public class GenerationMap : MonoBehaviour
                 {
                     Instantiate(_blockIron, new Vector3(x, 0, z), _blockIron.transform.rotation, gameObject.transform);
                 }
-
                 else if (perlinCoal > _spawnBlockCoalMin && perlinCoal < _spawnBlockCoalMax)
                 {
                     Instantiate(_blockCoal, new Vector3(x, 0, z), _blockCoal.transform.rotation, gameObject.transform);
                 }
-
                 else if (perlinCopper > _spawnBlockCopperMin && perlinCopper < _spawnBlockCopperMax)
                 {
                     Instantiate(_blockCopper, new Vector3(x, 0, z), _blockCopper.transform.rotation, gameObject.transform);
                 }
-
                 else if (perlinTree > _spawnTreeMin && perlinTree < _spawnTreeMax)
                 {
                     Instantiate(_tree, new Vector3(x, 0, z), _tree.transform.rotation, gameObject.transform);
                 }
-
                 else
                 {
                     Instantiate(_blockBasic, new Vector3(x, 0, z), _blockBasic.transform.rotation, gameObject.transform);
@@ -104,5 +99,4 @@ public class GenerationMap : MonoBehaviour
             DestroyImmediate(child.gameObject);
         }
     }
-
 }

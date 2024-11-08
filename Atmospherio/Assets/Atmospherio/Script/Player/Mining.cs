@@ -19,22 +19,22 @@ public class Mining : MonoBehaviour
     }
     public void RightClick(InputAction.CallbackContext ctx)
     {
-        if (DetectBlock.Instance._blockSelect == null)
+        _currentBlock = DetectBlock.Instance._blockSelect;
+        if (_currentBlock == null)
             return;
 
-        if (ctx.performed && DetectBlock.Instance._blockSelect.CompareTag("Resource"))
+        if (ctx.performed && _currentBlock.CompareTag("Resource"))
         {
             _sliderMining.gameObject.SetActive(true);
-            _currentBlock = DetectBlock.Instance._blockSelect;
             _isMining = true;
         }
-        else if (ctx.performed && DetectBlock.Instance._blockSelect.CompareTag("Build"))
+        else if (ctx.performed && _currentBlock.CompareTag("Build"))
         {
             if (_inventory.GetComponent<InventoryUI>()._isOpen)
             {
                 return;
             }
-            DetectBlock.Instance._blockSelect.GetComponent<Building>()._interfaceBuild.SetActive(true);
+            _currentBlock.GetComponent<Building>()._interfaceBuild.SetActive(true);
             _inventory.GetComponent<InventoryUI>().OpenInventory();
         }
         else if (ctx.canceled)
@@ -47,6 +47,8 @@ public class Mining : MonoBehaviour
 
     private void Update()
     {
+        print(DetectBlock.Instance._blockSelect);
+        print(_currentBlock);
         if (!_isMining || _currentBlock == null)
             return;
 
