@@ -26,7 +26,7 @@ public class ItemInitializer : MonoBehaviour
         yield return new WaitForSeconds(5f);
         foreach (var item in _item)
         {
-            _inventory.RemoveItem(item, 100);
+            _inventory.RemoveItem(item, 0);
         }
     }
 }
