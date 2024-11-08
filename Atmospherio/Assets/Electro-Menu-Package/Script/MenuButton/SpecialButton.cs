@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
-using static UnityEngine.UI.Button;
 
 public class SpecialButton: MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
@@ -16,13 +16,13 @@ public class SpecialButton: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     [Header("Events")]
     [FormerlySerializedAs("onClick")]
-    [SerializeField] private ButtonClickedEvent _onClick = new ButtonClickedEvent();
+    [SerializeField] public UnityEvent _onClick;
 
     [FormerlySerializedAs("onEnter")]
-    [SerializeField] private ButtonClickedEvent _onEnter = new ButtonClickedEvent();
+    [SerializeField] private UnityEvent _onEnter;
 
     [FormerlySerializedAs("onExit")]
-    [SerializeField] private ButtonClickedEvent _onExit = new ButtonClickedEvent();
+    [SerializeField] private UnityEvent _onExit;
 
     public void OnPointerEnter(PointerEventData eventData)
     {

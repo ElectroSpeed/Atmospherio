@@ -61,6 +61,8 @@ public class Building : MonoBehaviour
         {
             _interfaceBuild = Instantiate(_buildingUI, _inventory.transform);
             _interfaceBuild.GetComponent<RectTransform>().localPosition = new Vector3(0, 150, 0);
+            var specialButton = _interfaceBuild.transform.GetChild(0).GetComponent<SpecialButton>();
+            specialButton._onClick.AddListener(OnPanelExit);
         }
         if (_isExtraction)
         {
@@ -72,6 +74,12 @@ public class Building : MonoBehaviour
             _furnace.GetSliderFuel().maxValue = _timeToConsumeFuel;
         }
     }
+    public void OnPanelExit()
+    {
+        _inventory.GetComponent<InventoryUI>().OpenCloseSpecialPanel(_interfaceBuild);
+        _inventory.GetComponent<InventoryUI>().OpenInventory();
+    }
+
     private IEnumerator Extract()
     {
         yield return new WaitForSeconds(_timeConsumption);
