@@ -8,7 +8,6 @@ public class InventorySlot : MonoBehaviour
 
     public void ResetSlot()
     {
-        //Debug.Log("Enter");
         _item = null;
         _quantity = 0;
     }

@@ -11,8 +11,9 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] GameObject _inventorySlotPrefab;
     [SerializeField] Transform _inventoryPanelVisible;
     [SerializeField] Transform _inventoryPanelInvisible;
-    [SerializeField] Transform _inventoryTopPanel;
-    [SerializeField] List<GameObject> _inventoryItems = new();
+    [SerializeField] GameObject _inventoryTopPanel;
+    [SerializeField] GameObject _inventoryOpenButton;
+    [SerializeField] GameObject _inventoryRendersCraft;
     [SerializeField] PlayerInput _playerInput;
 
     public bool _isOpen = false; 
@@ -68,7 +69,8 @@ public class InventoryUI : MonoBehaviour
     public void OpenInventory()
     {
         _inventoryPanelInvisible.gameObject.SetActive(!_inventoryPanelInvisible.gameObject.activeSelf);
-        _inventoryTopPanel.gameObject.SetActive(!_inventoryTopPanel.gameObject.activeSelf);
+        _inventoryTopPanel.SetActive(!_inventoryTopPanel.gameObject.activeSelf);
+        _inventoryOpenButton.SetActive(!_inventoryTopPanel.gameObject.activeSelf);
         if (_isOpen)
         {
             _playerInput.currentActionMap.Enable();
@@ -79,8 +81,16 @@ public class InventoryUI : MonoBehaviour
         }
         _isOpen = !_isOpen;
     }
-    public void OpenCloseSpecialPanel(int index)
+    public void OpenCloseSpecialPanel(GameObject specialPanel)
     {
-        _inventoryItems[index].SetActive(!_inventoryItems[index].activeSelf);
+        specialPanel.SetActive(!specialPanel.activeSelf);
+    }
+
+    public void DisableAllRenderCraft()
+    {
+        for (int c = 0; c < _inventoryRendersCraft.transform.childCount; c++)
+        {
+            _inventoryRendersCraft.transform.GetChild(c).gameObject.SetActive(false);
+        }
     }
 }
