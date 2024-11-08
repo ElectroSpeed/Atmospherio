@@ -34,6 +34,8 @@ public class GenerationMap : MonoBehaviour
     [SerializeField] private GameObject _blockCoal;
     [SerializeField] private GameObject _blockCopper;
     [SerializeField] private GameObject _tree;
+    [SerializeField] private GameObject _blockSand;
+    [SerializeField] private GameObject _blockStone;
 
     [Header("Spawn Block Iron")]
     [SerializeField] private float _spawnBlockIronMin;
@@ -50,6 +52,16 @@ public class GenerationMap : MonoBehaviour
     [Header("Spawn Tree")]
     [SerializeField] private float _spawnTreeMin;
     [SerializeField] private float _spawnTreeMax;
+    
+    [Header("Spawn Sand")]
+    [SerializeField] private float _spawnSandMin;
+    [SerializeField] private float _spawnSandMax;
+    
+    [Header("Spawn Stone")]
+    [SerializeField] private float _spawnStoneMin;
+    [SerializeField] private float _spawnStoneMax;
+    
+    
 
     public void GenerateMap()
     {
@@ -57,6 +69,8 @@ public class GenerationMap : MonoBehaviour
         int seedCoal = Random.Range(-10000, 10000);
         int seedCopper = Random.Range(-10000, 10000);
         int seedTree = Random.Range(-10000, 10000);
+        int seedSand = Random.Range(-10000, 10000);
+        int seedStone = Random.Range(-10000, 10000);
 
         for (int z = 0; z < _height; z++)
         {
@@ -66,6 +80,8 @@ public class GenerationMap : MonoBehaviour
                 float perlinCoal = Mathf.PerlinNoise(x / 10f + seedCoal, z / 10f + seedCoal);
                 float perlinCopper = Mathf.PerlinNoise(x / 10f + seedCopper, z / 10f + seedCopper);
                 float perlinTree = Mathf.PerlinNoise(x / 10f + seedTree, z / 10f + seedTree);
+                float perlinSand = Mathf.PerlinNoise(x / 10f + seedSand, z / 10f + seedSand);
+                float perlinStone = Mathf.PerlinNoise(x / 10f + seedStone, z / 10f + seedStone);
 
                 if (perlinIron > _spawnBlockIronMin && perlinIron < _spawnBlockIronMax)
                 {
@@ -82,6 +98,14 @@ public class GenerationMap : MonoBehaviour
                 else if (perlinTree > _spawnTreeMin && perlinTree < _spawnTreeMax)
                 {
                     Instantiate(_tree, new Vector3(x, 0, z), _tree.transform.rotation, gameObject.transform);
+                }
+                else if (perlinSand > _spawnSandMin && perlinSand < _spawnSandMax)
+                {
+                    Instantiate(_blockSand, new Vector3(x, 0, z), _blockSand.transform.rotation, gameObject.transform);
+                }
+                else if (perlinStone > _spawnStoneMin && perlinStone < _spawnStoneMax)
+                {
+                    Instantiate(_blockStone, new Vector3(x, 0, z), _blockStone.transform.rotation, gameObject.transform);
                 }
                 else
                 {
