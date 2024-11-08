@@ -78,6 +78,7 @@ public class Building : MonoBehaviour
         _inventory.AddItem(_itemExtraction, 1);
         StartCoroutine(Extract());
     }
+
     private void CookRessource()
     {
         InventorySlot slotOre = _furnace.GetSlotOre();
@@ -86,10 +87,11 @@ public class Building : MonoBehaviour
         Slider sliderCook = _furnace.GetSliderCook();
         Slider sliderFuel = _furnace.GetSliderFuel();
 
-        if (slotOre._item != null && !Mathf.Approximately(sliderCook.maxValue, slotOre._item._timeCook))
+        if (slotOre._item != null && slotOre._item._timeCook > 0)
         {
             sliderCook.maxValue = slotOre._item._timeCook;
         }
+
         if (slotResult._item != null && slotOre._item._ressourceCook != slotResult._item)
         {
             _furnace.ResetSliderCook();
@@ -100,7 +102,7 @@ public class Building : MonoBehaviour
         if (sliderCook.value >= sliderCook.maxValue)
         {
             sliderCook.value = 0;
-            slotOre._quantity -= 1;
+            slotOre._quantity--;
             slotOre.GetComponentInChildren<ItemUI>().SetItem(slotOre);
 
             if (slotResult._item == null)
@@ -108,33 +110,31 @@ public class Building : MonoBehaviour
                 Instantiate(_inventory.GetEmptyItem(), slotResult.transform);
                 slotResult._item = slotOre._item._ressourceCook;
             }
-            
-            slotResult._quantity += 1;
+            slotResult._quantity++;
             slotResult.GetComponentInChildren<ItemUI>().SetItem(slotResult);
-            
+
             if (slotOre._quantity <= 0)
             {
                 slotOre._item = null;
                 Destroy(slotOre.transform.GetChild(0).gameObject);
             }
-            // Add resource
         }
 
-        if (Mathf.Approximately(sliderFuel.value, 0))
+        if (sliderFuel.value <= 0)
         {
-            if (slotFuel._item == null) return;
-            if (slotFuel._item._itemName != "Coal") return;
-
-            slotFuel._quantity -= 1;
-            slotFuel.GetComponentInChildren<ItemUI>().SetItem(slotFuel);
-
-            if (slotFuel._quantity > 0)
+            if (slotFuel._item != null && slotFuel._item._itemName == "Coal")
             {
-                sliderFuel.value = _timeToConsumeFuel;
-            }
-            else
-            {
-                slotFuel._item = null;
+                slotFuel._quantity--;
+                slotFuel.GetComponentInChildren<ItemUI>().SetItem(slotFuel);
+
+                if (slotFuel._quantity > 0)
+                {
+                    sliderFuel.value = _timeToConsumeFuel;
+                }
+                else
+                {
+                    slotFuel._item = null;
+                }
             }
         }
 
