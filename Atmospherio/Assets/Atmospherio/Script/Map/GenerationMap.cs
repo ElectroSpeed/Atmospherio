@@ -99,9 +99,8 @@ public class GenerationMap : MonoBehaviour
     {
         List<Transform> childs = gameObject.transform.GetComponentsInChildren<Transform>().ToList();
 
-        foreach(Transform child in childs.ToList())
+        foreach (Transform child in childs.ToList().Where(child => child != null).Where(child => child.gameObject != gameObject))
         {
-            if(child.gameObject == gameObject) continue;
             DestroyImmediate(child.gameObject);
         }
     }
