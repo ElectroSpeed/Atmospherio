@@ -17,6 +17,7 @@ public class BuildingCustomEditor : Editor
         if (buildingSystem._isExtraction)
         {
             SerializeProperty("_timeConsumption");
+            SerializeProperty("_timeToConsumeFuel");
         }
         EditorGUILayout.Space(10);
         SerializeProperty("_isFurnace");
@@ -52,7 +53,8 @@ public class Building : MonoBehaviour
     [NonSerialized] public Item _itemExtraction;
 
     private Furnace _furnace;
-    
+    private Extractor _extractor;
+
 
     private void Start()
     {
@@ -66,7 +68,9 @@ public class Building : MonoBehaviour
         }
         if (_isExtraction)
         {
-            StartCoroutine(Extract());
+            _extractor = _interfaceBuild.GetComponent<Extractor>();
+            _extractor.GetSliderFuel().maxValue = _timeToConsumeFuel;
+            _extractor.GetSliderExtraction().maxValue = _timeConsumption;
         }
         else if (_isFurnace)
         {
@@ -78,13 +82,6 @@ public class Building : MonoBehaviour
     {
         _inventory.GetComponent<InventoryUI>().OpenCloseSpecialPanel(_interfaceBuild);
         _inventory.GetComponent<InventoryUI>().OpenInventory();
-    }
-
-    private IEnumerator Extract()
-    {
-        yield return new WaitForSeconds(_timeConsumption);
-        _inventory.AddItem(_itemExtraction, 1);
-        StartCoroutine(Extract());
     }
 
     private void CookRessource()
@@ -149,12 +146,72 @@ public class Building : MonoBehaviour
         sliderFuel.value = Mathf.Max(0, sliderFuel.value - Time.deltaTime);
         sliderCook.value = Mathf.Min(sliderCook.maxValue, sliderCook.value + Time.deltaTime);
     }
+
     private void Update()
     {
         if (_isFurnace)
         {
             TryCookRessource();
         }
+        if (_isExtraction)
+        {
+            TryExtractRessource();
+        }
+    }
+
+    private bool TryExtractRessource()
+    {
+        if (_extractor.GetSlotFuel()._item == null || _extractor.GetSlotFuel()._item._itemName != "Coal")
+        {
+            _extractor.GetSliderFuel().value -= Time.deltaTime;
+            if (_extractor.GetSliderFuel().value <= 0)
+            {
+                _extractor.ResetSliderExtraction();
+                return false;
+            }
+            else
+            {
+                ExtractRessource();
+                return true;
+            }
+        }
+        if (_extractor.GetSlotFuel()._item != null)
+        {
+            ExtractRessource();
+            Debug.Log("Extract");
+            return true;
+        }
+        Debug.Log("Sortie");
+        return false;
+    }
+
+    private void ExtractRessource()
+    {
+        InventorySlot slotFuel = _extractor.GetSlotFuel();
+        InventorySlot slotResult = _extractor.GetSlotResult();
+        Slider sliderExtraction = _extractor.GetSliderExtraction();
+        Slider sliderFuel = _extractor.GetSliderFuel();
+
+        if (sliderFuel.value <= 0)
+        {
+            sliderFuel.value = _timeToConsumeFuel;
+            slotFuel._quantity--;
+            slotFuel.GetComponentInChildren<ItemUI>().SetItem(slotFuel);
+        }        
+        if (sliderExtraction.value >= sliderExtraction.maxValue)
+        {
+            if (slotResult._item == null)
+            {
+                Instantiate(_inventory.GetEmptyItem(), slotResult.transform);
+                slotResult._item = _itemExtraction;
+            }
+            sliderExtraction.value = 0;
+            slotResult._quantity++;
+            slotResult.GetComponentInChildren<ItemUI>().SetItem(slotResult);
+        }
+        sliderExtraction.value = Mathf.Min(sliderExtraction.maxValue, sliderExtraction.value + Time.deltaTime);
+        sliderFuel.value = Mathf.Max(0, sliderFuel.value - Time.deltaTime);
+
     }
 
     private bool TryCookRessource()

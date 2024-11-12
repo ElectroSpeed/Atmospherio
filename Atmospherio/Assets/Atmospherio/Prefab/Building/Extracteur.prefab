@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6063730741480377396}
   m_Layer: 7
   m_Name: Extracteur
-  m_TagString: Untagged
+  m_TagString: Build
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,8 +68,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isExtraction: 1
+  _isFurnace: 0
   _timeConsumption: 2
-  _itemExtraction: {fileID: 0}
+  _timeToConsumeFuel: 10
+  _buildingUI: {fileID: 4309560238381041099, guid: fb41e7cf3f4cc4d419962c6ae0180fd1, type: 3}
+  _inventory: {fileID: 0}
+  _interfaceBuild: {fileID: 0}
 --- !u!1 &8131919063569036211
 GameObject:
   m_ObjectHideFlags: 0
