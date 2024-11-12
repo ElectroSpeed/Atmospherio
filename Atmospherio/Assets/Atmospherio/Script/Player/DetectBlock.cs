@@ -36,10 +36,8 @@ public class DetectBlock : MonoBehaviour
                 float scaleY = hit.collider.transform.localScale.y / 2;
                 posSelect.position = hit.collider.transform.position + new Vector3(0, scaleY, 0);
             }
-            if (hit.collider.gameObject.layer == 7)
-                _blockSelect = null;
-            else
-                _blockSelect = hit.collider.gameObject;
+            
+            _blockSelect = hit.collider.gameObject;
         }
     }
 }

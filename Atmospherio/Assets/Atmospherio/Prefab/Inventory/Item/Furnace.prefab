@@ -88,10 +88,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a540534d63e514882a8606594fdc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 61647215, guid: 6fb31d29b764dc641afd297865473336, type: 3}
+  _icon: {fileID: 21300000, guid: ff970597025d22441869151de308e93c, type: 3}
   _itemName: Furnace
   _itemDescription: 
   _itemBuilding: {fileID: 6556699169188264438, guid: b51291baa9b741c46a7d6d3934349747, type: 3}
-  _maxStack: 16
+  _maxStack: 64
   _ressourceCook: {fileID: 0}
   _timeCook: 0
