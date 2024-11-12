@@ -92,5 +92,6 @@ MonoBehaviour:
   _itemName: OxyBubble
   _itemDescription: 
   _itemBuilding: {fileID: 0}
-  _maxStack: 64
-  _count: 0
+  _maxStack: 16
+  _ressourceCook: {fileID: 0}
+  _timeCook: 0

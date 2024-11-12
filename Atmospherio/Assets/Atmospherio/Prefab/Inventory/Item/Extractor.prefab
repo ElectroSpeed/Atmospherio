@@ -92,5 +92,6 @@ MonoBehaviour:
   _itemName: Extractor
   _itemDescription: 
   _itemBuilding: {fileID: 6556699169188264438, guid: 220f41fa2f0f91d448426f77375eac5f, type: 3}
-  _maxStack: 5
-  _count: 0
+  _maxStack: 16
+  _ressourceCook: {fileID: 0}
+  _timeCook: 0

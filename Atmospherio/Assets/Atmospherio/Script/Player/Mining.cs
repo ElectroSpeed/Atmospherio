@@ -47,8 +47,6 @@ public class Mining : MonoBehaviour
 
     private void Update()
     {
-        print(DetectBlock.Instance._blockSelect);
-        print(_currentBlock);
         if (!_isMining || _currentBlock == null)
             return;
 

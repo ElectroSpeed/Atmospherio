@@ -92,5 +92,6 @@ MonoBehaviour:
   _itemName: Chest
   _itemDescription: 
   _itemBuilding: {fileID: 1937855980842610565, guid: 66f4e34cef6958244b18a52a47469de4, type: 3}
-  _maxStack: 64
-  _count: 0
+  _maxStack: 16
+  _ressourceCook: {fileID: 0}
+  _timeCook: 0

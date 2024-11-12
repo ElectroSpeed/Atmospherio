@@ -92,4 +92,6 @@ MonoBehaviour:
   _itemName: Furnace
   _itemDescription: 
   _itemBuilding: {fileID: 6556699169188264438, guid: b51291baa9b741c46a7d6d3934349747, type: 3}
-  _maxStack: 64
+  _maxStack: 16
+  _ressourceCook: {fileID: 0}
+  _timeCook: 0

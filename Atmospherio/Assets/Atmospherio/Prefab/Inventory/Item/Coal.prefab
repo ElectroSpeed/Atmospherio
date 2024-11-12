@@ -92,6 +92,6 @@ MonoBehaviour:
   _itemName: Coal
   _itemDescription: 
   _itemBuilding: {fileID: 0}
-  _maxStack: 32
-  _count: 0
-  _isFuel: 1
+  _maxStack: 64
+  _ressourceCook: {fileID: 0}
+  _timeCook: 0
