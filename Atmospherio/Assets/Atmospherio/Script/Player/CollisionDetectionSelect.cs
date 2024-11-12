@@ -6,12 +6,11 @@ public class CollisionDetectionSelect : MonoBehaviour
     private int _numberEnter;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 2)
+        if (other.gameObject.layer == 2 || other.gameObject.layer == 9)
             return;
 
         _numberEnter += 1;
         _collisionEnter = true;
-        print(other.name);
     }
 
     private void OnTriggerExit(Collider other)
