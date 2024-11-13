@@ -13,7 +13,6 @@ public class Pipe : MonoBehaviour
     {
         if (other.gameObject.layer == 9)
         {
-            print("Pipe enter");
             Pipe otherPipe = other.GetComponent<Pipe>();
             if (other.transform.position.x > _transform.position.x)
             {
@@ -34,6 +33,7 @@ public class Pipe : MonoBehaviour
             {
                 _leftPipe = other.gameObject;
             }
+            other.GetComponent<Building>().SetPiped(true, gameObject);
         }
     }
 }
