@@ -35,6 +35,38 @@ public class CraftItem : MonoBehaviour
         _inventory.AddItem(receipe._itemCraft, receipe._itemCraftCount);
     }
 
+    public void UpgradeOxyBulle(CraftReciepe receipe)
+    {
+        foreach (ComponentCraft item in receipe._componentCraftList)
+        {
+            if (!_inventory.CheckNumberItem(item._itemComponentCraft, item._quantityComponentCraft))
+            {
+                Debug.Log("Pas assez de composants pour Upgrade.");
+                return;
+            }
+        }
+        foreach (ComponentCraft item in receipe._componentCraftList)
+        {
+            _inventory.RemoveItem(item._itemComponentCraft, item._quantityComponentCraft);
+        }
+
+        ZoneManager bubbleZone = GameObject.FindFirstObjectByType<ZoneManager>();
+        bubbleZone.UpgradeZone(2);
+    }
+
+    public bool CanUpgrade(CraftReciepe receipe)
+    {
+        foreach (ComponentCraft item in receipe._componentCraftList)
+        {
+            if (!_inventory.CheckNumberItem(item._itemComponentCraft, item._quantityComponentCraft))
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     private bool CanAddCraftedItem(CraftReciepe receipe)
     {
         foreach (InventorySlot slot in _inventory._slots)
