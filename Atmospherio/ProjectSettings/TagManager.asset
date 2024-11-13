@@ -16,8 +16,8 @@ TagManager:
   - UI
   - Player
   - Building
-  - 
-  - 
+  - Pipe
+  - PipeCollider
   - 
   - 
   - 

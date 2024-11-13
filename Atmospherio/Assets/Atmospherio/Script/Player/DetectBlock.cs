@@ -34,7 +34,7 @@ public class DetectBlock : MonoBehaviour
             {
                 posSelect.gameObject.SetActive(true);
                 float scaleY = hit.collider.transform.localScale.y / 2;
-                posSelect.position = hit.collider.transform.position + new Vector3(0, scaleY, 0);
+                posSelect.position =  new Vector3(hit.collider.transform.position.x, 0.5f, hit.collider.transform.position.z);
             }
             
             _blockSelect = hit.collider.gameObject;

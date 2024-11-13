@@ -29,6 +29,7 @@ public class BuildingCustomEditor : Editor
         SerializeProperty("_buildingUI");
         SerializeProperty("_inventory");
         SerializeProperty("_interfaceBuild");
+        SerializeProperty("_isChest");
         serializedObject.ApplyModifiedProperties();
     }
     private void SerializeProperty(string variable)
@@ -49,12 +50,16 @@ public class Building : MonoBehaviour
     [HideInInspector] public GameObject _buildingUI;
     [HideInInspector] public Inventory _inventory;
     [HideInInspector] public GameObject _interfaceBuild;
+    [HideInInspector] public bool _isChest;
     
     [NonSerialized] public Item _itemExtraction;
 
     private Furnace _furnace;
     private Extractor _extractor;
 
+    public bool _isPiped;
+    public GameObject _pipeConnected;
+    
 
     private void Start()
     {
@@ -77,6 +82,13 @@ public class Building : MonoBehaviour
             _furnace = _interfaceBuild.GetComponent<Furnace>();
             _furnace.GetSliderFuel().maxValue = _timeToConsumeFuel;
         }
+    }
+    public void SetPiped(bool piped, GameObject pipe)
+    {
+        if (_isPiped) return;
+        
+        _isPiped = piped;
+        _pipeConnected = pipe;
     }
     public void OnPanelExit()
     {
@@ -110,13 +122,16 @@ public class Building : MonoBehaviour
             slotOre._quantity--;
             slotOre.GetComponentInChildren<ItemUI>().SetItem(slotOre);
 
-            if (slotResult._item == null)
+            if (!TryPipe())
             {
-                Instantiate(_inventory.GetEmptyItem(), slotResult.transform);
-                slotResult._item = slotOre._item._ressourceCook;
+                if (slotResult._item == null)
+                {
+                    Instantiate(_inventory.GetEmptyItem(), slotResult.transform);
+                    slotResult._item = slotOre._item._ressourceCook;
+                }
+                slotResult._quantity++;
+                slotResult.GetComponentInChildren<ItemUI>().SetItem(slotResult);
             }
-            slotResult._quantity++;
-            slotResult.GetComponentInChildren<ItemUI>().SetItem(slotResult);
 
             if (slotOre._quantity <= 0)
             {
@@ -243,5 +258,68 @@ public class Building : MonoBehaviour
         
         CookRessource();
         return true;
+    }
+    private bool TryPipe()
+    {
+        if (_pipeConnected == null || !_isFurnace && !_isExtraction || _isChest) return false;
+
+        Pipe pipe = _pipeConnected.GetComponent<Pipe>();
+        GameObject pipeConnected = gameObject;
+
+        for (int i = 0; i < 9999; i++)
+        {
+            if (pipe._rightPipe != null && pipe._rightPipe != pipeConnected)
+            {
+                pipeConnected = pipe.gameObject;
+                if (pipe._rightPipe.GetComponent<Building>() != null)
+                {
+                    return AddWithPipe(pipe._rightPipe.GetComponent<Building>());
+                }
+                pipe = pipe._rightPipe.GetComponent<Pipe>();
+            }
+            else if (pipe._leftPipe != pipeConnected && pipe._leftPipe != null)
+            {
+                pipeConnected = pipe.gameObject;
+                pipe = pipe._leftPipe.GetComponent<Pipe>();
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return false;
+    }
+    private bool AddWithPipe(Building building)
+    {
+        print("enter");
+        if (_furnace)
+        {
+            if (building._isChest)
+            {
+                InventorySlot slot = building._interfaceBuild.GetComponentInChildren<InventorySlot>();
+                print(slot);
+                if (slot._item == null)
+                {
+                    GameObject obj = Instantiate(_inventory.GetEmptyItem(), slot.transform);
+                    slot._item = _furnace.GetSlotOre()._item._ressourceCook;
+                    print(obj);
+                }
+                slot._quantity++;
+                slot.GetComponentInChildren<ItemUI>().SetItem(slot);
+                return true;
+            }
+        }
+        else if (_isExtraction)
+        {
+            if (building._isFurnace)
+            {
+                
+            }
+            else if (building._isChest)
+            {
+                
+            }
+        }
+        return false;
     }
 }
