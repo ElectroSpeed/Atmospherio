@@ -6,10 +6,15 @@ public class DetectBlock : MonoBehaviour
     public GameObject _blockSelect;
     public static DetectBlock Instance;
     [HideInInspector] public bool _isDragging;
+    public float _distanceToPlayer;
+    private SpriteRenderer _selectSprite;
+    private Transform _transform;
 
     private void Awake()
     {
         Instance = this;
+        _selectSprite = _posSelect.GetComponentInChildren<SpriteRenderer>();
+        _transform = transform;
     }
     void Start()
     {
@@ -18,6 +23,8 @@ public class DetectBlock : MonoBehaviour
     void Update()
     {
         SetSelection(_posSelect, _camera);
+
+        _selectSprite.color = Vector3.Distance(_transform.position, _posSelect.position) > _distanceToPlayer ? Color.red : Color.white;
     }
 
     private void SetSelection(Transform posSelect, Camera camera)
@@ -33,8 +40,12 @@ public class DetectBlock : MonoBehaviour
             else
             {
                 posSelect.gameObject.SetActive(true);
-                float scaleY = hit.collider.transform.localScale.y / 2;
-                posSelect.position =  new Vector3(hit.collider.transform.position.x, 0.5f, hit.collider.transform.position.z);
+                if (hit.collider.gameObject.layer == 7 && (hit.collider.GetComponent<Building>()._isChest || !hit.collider.GetComponent<Building>()._isFurnace && !hit.collider.GetComponent<Building>()._isExtraction))
+                {
+                    posSelect.position = new Vector3(hit.collider.transform.position.x, 1.5f, hit.collider.transform.position.z);
+                }
+                else
+                    posSelect.position =  new Vector3(hit.collider.transform.position.x, 0.5f, hit.collider.transform.position.z);
             }
             
             _blockSelect = hit.collider.gameObject;

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 922905375194542670}
   - component: {fileID: 518412602836497349}
   - component: {fileID: -4140151214816405018}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OxyBulle
   m_TagString: Build
   m_Icon: {fileID: 0}
@@ -125,6 +125,9 @@ MonoBehaviour:
   _isFurnace: 0
   _timeConsumption: 0
   _timeToConsumeFuel: 0
-  _buildingUI: {fileID: 4330084118367636052, guid: 27346f8aefb4b4d4dbebe71eff816057, type: 3}
+  _buildingUI: {fileID: 4309560238381041099, guid: a3e5684a86d4512409af1c2936bd9978, type: 3}
   _inventory: {fileID: 0}
   _interfaceBuild: {fileID: 0}
+  _isChest: 0
+  _isPiped: 0
+  _pipeConnected: {fileID: 0}

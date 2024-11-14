@@ -7,6 +7,7 @@ public class Mining : MonoBehaviour
     public bool _isMining;
     public float _timeMining;
     public float _currentTimeMining;
+    public float _distanceToPlayer;
 
     private Inventory _inventory;
     private GameObject _currentBlock;
@@ -21,6 +22,9 @@ public class Mining : MonoBehaviour
     {
         _currentBlock = DetectBlock.Instance._blockSelect;
         if (_currentBlock == null)
+            return;
+        
+        if (Vector3.Distance(_currentBlock.transform.position, gameObject.transform.position) > _distanceToPlayer)
             return;
 
         if (ctx.performed && _currentBlock.CompareTag("Resource"))
