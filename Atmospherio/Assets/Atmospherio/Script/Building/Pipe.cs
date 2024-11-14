@@ -13,27 +13,45 @@ public class Pipe : MonoBehaviour
     {
         if (other.gameObject.layer == 9)
         {
-            Pipe otherPipe = other.GetComponent<Pipe>();
-            if (other.transform.position.x > _transform.position.x)
-            {
-                _rightPipe = other.gameObject;
-            }
-            else if (other.transform.position.x < _transform.position.x)
-            {
-                _leftPipe = other.gameObject;
-            }
+            SetLeftRightPipe(other.transform);
         }
         else if (other.gameObject.layer == 7)
         {
-            if (other.transform.position.x > _transform.position.x)
-            {
-                _rightPipe = other.gameObject;
-            }
-            else if (other.transform.position.x < _transform.position.x)
-            {
-                _leftPipe = other.gameObject;
-            }
+            SetLeftRightPipe(other.transform);
             other.GetComponent<Building>().SetPiped(true, gameObject);
         }
+    }
+    private void SetLeftRightPipe(Transform other)
+    {
+        if (other.position.x > _transform.position.x)
+        {
+            _rightPipe = other.gameObject;
+        }
+        else if (other.position.x < _transform.position.x)
+        {
+            _leftPipe = other.gameObject;
+        }
+        else if (other.position.z > _transform.position.z)
+        {
+            _rightPipe = other.gameObject;
+        }
+        else if (other.position.z < _transform.position.z)
+        {
+            _leftPipe = other.gameObject;
+        }
+    }
+    public void Rotate()
+    {
+        if (_leftPipe != null && _leftPipe.GetComponent<Pipe>() != null)
+        {
+            _leftPipe.GetComponent<Pipe>()._rightPipe = null;
+        }
+        if (_rightPipe != null && _rightPipe.GetComponent<Pipe>() != null)
+        {
+            _rightPipe.GetComponent<Pipe>()._leftPipe = null;
+        }
+        _leftPipe = null;
+        _rightPipe = null;
+        transform.parent.Rotate(0, 90, 0);
     }
 }
