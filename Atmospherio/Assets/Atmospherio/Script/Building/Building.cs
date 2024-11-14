@@ -94,6 +94,8 @@ public class Building : MonoBehaviour
             {
                 SpecialButton specialbutton = _interfaceBuild.transform.GetChild(1).GetChild(i).GetComponent<SpecialButton>();
                 GameObject objectToActive = _interfaceBuild.transform.GetChild(2).GetChild(i).gameObject;
+                SpecialButton craftButton = objectToActive.transform.GetChild(1).GetComponent<SpecialButton>();
+                craftButton._onClick.AddListener(delegate { _inventory.GetComponent<CraftItem>().CraftNewItem(craftButton.GetComponent<CraftReciepe>()); });
                 specialbutton._onClick.AddListener(delegate { SetActive(objectToActive); });
             }
         }
