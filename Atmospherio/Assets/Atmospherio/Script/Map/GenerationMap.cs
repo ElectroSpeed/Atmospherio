@@ -23,6 +23,7 @@ public class GenerationMapEditor : Editor
         }
     }
 }
+#endif
 
 public class GenerationMap : MonoBehaviour
 {
