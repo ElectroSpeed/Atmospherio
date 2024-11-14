@@ -30,7 +30,7 @@ public class Mining : MonoBehaviour
         }
         else if (ctx.performed && _currentBlock.CompareTag("Build"))
         {
-            if (_inventory.GetComponent<InventoryUI>()._isOpen)
+            if (_inventory.GetComponent<InventoryUI>()._isOpen || _currentBlock.GetComponent<Building>()._interfaceBuild == null)
             {
                 return;
             }

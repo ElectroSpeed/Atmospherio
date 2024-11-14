@@ -6,15 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f935ae3e-9cef-4ce8-8bd5-ff80445d68da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Atmospherio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Atmospherio/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Asset/Item/test_texture_sol_facto_pierre.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Asset/Item/test_texture_sol_facto_pierre.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Asset/Item/test_texture_sol_facto_sable.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Asset/Item/test_texture_sol_facto_sable.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Furnace.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Furnace.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Furnace.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Furnace.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Furnace.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Furnace.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/__Inventory__.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/__Inventory__.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Scenes/Building.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Scenes/Building.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Map/GenerationMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Map/GenerationMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Player/DetectBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Player/DetectBlock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Chest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Building/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Building/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Building/Pipe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Building/Pipe.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +89,8 @@
       <option name="presentableId" value="Default" />
       <updated>1731069759215</updated>
       <workItem from="1731069761690" duration="624000" />
+      <workItem from="1731416900968" duration="7397000" />
+      <workItem from="1731501727262" duration="9042000" />
     </task>
     <servers />
   </component>

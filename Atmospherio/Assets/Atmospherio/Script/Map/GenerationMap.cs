@@ -3,6 +3,8 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
+
 [CustomEditor(typeof(GenerationMap))]
 public class GenerationMapEditor : Editor
 {
@@ -21,6 +23,7 @@ public class GenerationMapEditor : Editor
         }
     }
 }
+#endif
 
 public class GenerationMap : MonoBehaviour
 {
