@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -9,6 +10,9 @@ using UnityEngine.SceneManagement;
 public class MenuEventsManager : MonoBehaviour
 {
     public static MenuEventsManager Instance;
+
+    [SerializeField] private TMP_Dropdown _dropdownResolution;
+    private Resolution[] _resolutions;
 
     private void Awake()
     {
@@ -25,9 +29,42 @@ public class MenuEventsManager : MonoBehaviour
     {
         Screen.SetResolution(1920, 1080, true);
         Time.timeScale = 1.0f;
+        GetResolution();
     }
+
+    public void SetFullScreen(bool active)
+    {
+        Screen.fullScreen = active;
+    }
+
+    private void GetResolution()
+    {
+        _resolutions = Screen.resolutions.Select(_resolutions => new Resolution { width = _resolutions.width, height = _resolutions.height }).Distinct().ToArray();
+        _dropdownResolution.ClearOptions();
+        List<string> options = new();
+        int currentResolution = 0;
+        for (int i = 0; i < _resolutions.Length; i++)
+        {
+            string option = _resolutions[i].width + "x" + _resolutions[i].height;
+            options.Add(option);
+            if (_resolutions[i].width == Screen.width && _resolutions[i].height == Screen.height)
+            {
+                currentResolution = i;
+            }
+        }
+        _dropdownResolution.AddOptions(options);
+        _dropdownResolution.value = currentResolution;
+        _dropdownResolution.RefreshShownValue();
+    }
+    public void SetResolution(int resolutionIndex)
+    {
+        Resolution resolution = _resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+
     public void OnApplicationQuit()
     {
+        Screen.SetResolution(1920, 1080, true);
         Application.Quit();
     }
 

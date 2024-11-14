@@ -1,8 +1,5 @@
-using System.Collections.Generic;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -16,7 +13,7 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] GameObject _inventoryRendersCraft;
     [SerializeField] PlayerInput _playerInput;
 
-    public bool _isOpen = false; 
+    public bool _isOpen = false;
 
     public int _totalSlots;
     public int _slotsPerLine;
