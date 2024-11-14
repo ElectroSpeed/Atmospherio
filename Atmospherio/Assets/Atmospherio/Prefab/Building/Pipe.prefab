@@ -66,6 +66,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60fd9796d8e691848bfb87f299d0971e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _leftPipe: {fileID: 0}
+  _rightPipe: {fileID: 0}
 --- !u!1 &6556699169188264438
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,6 +144,9 @@ MonoBehaviour:
   _buildingUI: {fileID: 0}
   _inventory: {fileID: 0}
   _interfaceBuild: {fileID: 0}
+  _isChest: 0
+  _isPiped: 0
+  _pipeConnected: {fileID: 0}
 --- !u!54 &2422691169252001809
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -165,7 +170,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -244,7 +249,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1710205968, guid: 0a49ab1738465b74c990679d9adb90af, type: 3}
   m_Color: {r: 0, g: 1, b: 0.121603966, a: 1}
   m_FlipX: 0

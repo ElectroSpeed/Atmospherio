@@ -74,6 +74,9 @@ MonoBehaviour:
   _buildingUI: {fileID: 4309560238381041099, guid: 15d1c175c541b5d41a0d442929902611, type: 3}
   _inventory: {fileID: 0}
   _interfaceBuild: {fileID: 0}
+  _isChest: 0
+  _isPiped: 0
+  _pipeConnected: {fileID: 0}
 --- !u!1 &8131919063569036211
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,8 +103,8 @@ Transform:
   m_GameObject: {fileID: 8131919063569036211}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 1.5, z: -1}
-  m_LocalScale: {x: 0.85, y: 1, z: 1}
+  m_LocalPosition: {x: -0.3, y: 1.1001, z: -1.5}
+  m_LocalScale: {x: 0.75, y: 0.6890649, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4429976582918209546}
@@ -149,7 +152,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: ff970597025d22441869151de308e93c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

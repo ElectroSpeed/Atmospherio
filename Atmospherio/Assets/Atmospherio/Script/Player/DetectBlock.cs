@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 public class DetectBlock : MonoBehaviour
 {
     private Camera _camera;
@@ -40,7 +41,7 @@ public class DetectBlock : MonoBehaviour
             else
             {
                 posSelect.gameObject.SetActive(true);
-                if (hit.collider.gameObject.layer == 7 && (hit.collider.GetComponent<Building>()._isChest || !hit.collider.GetComponent<Building>()._isFurnace && !hit.collider.GetComponent<Building>()._isExtraction))
+                if (hit.collider.gameObject.layer == 7 && (!hit.collider.GetComponent<Building>()._isChest && !hit.collider.GetComponent<Building>()._isFurnace && !hit.collider.GetComponent<Building>()._isExtraction))
                 {
                     posSelect.position = new Vector3(hit.collider.transform.position.x, 1.5f, hit.collider.transform.position.z);
                 }
@@ -50,5 +51,13 @@ public class DetectBlock : MonoBehaviour
             
             _blockSelect = hit.collider.gameObject;
         }
+    }
+    public void RotateBlock(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.canceled) return;
+        if (_blockSelect == null) return;
+        Pipe pipe = _blockSelect.GetComponentInChildren<Pipe>();
+        if (pipe == null) return;
+        pipe.Rotate();
     }
 }
