@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f935ae3e-9cef-4ce8-8bd5-ff80445d68da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Atmospherio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Atmospherio/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockIron.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockIron.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Inventory/CraftItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Inventory/CraftItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Map/ZoneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Map/ZoneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/DragAndDropItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/DragAndDropItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Slot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Slot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/_Chest_.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/_Chest_.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Scenes/Building.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Scenes/Building.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Inventory/ItemUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Inventory/ItemUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Atmospherio/Script/Ui/Description.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3

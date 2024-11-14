@@ -8,6 +8,7 @@ public class ItemUI : MonoBehaviour
     public TMP_Text _itemCount;
     public Image _itemIcon;
     public Item _item;
+    public GameObject _description;
 
     public void SetItem(InventorySlot slotInformation)
     {
@@ -17,6 +18,7 @@ public class ItemUI : MonoBehaviour
             _item = slotInformation._item;
             _itemCount.text = slotInformation._quantity.ToString();
             _itemIcon.sprite = slotInformation._item._icon;
+            GetComponentInParent<Description>().SetUiDescription(_description);
         }
     }
 }
