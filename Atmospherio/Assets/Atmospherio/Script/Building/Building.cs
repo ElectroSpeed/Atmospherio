@@ -215,14 +215,17 @@ public class Building : MonoBehaviour
         }        
         if (sliderExtraction.value >= sliderExtraction.maxValue)
         {
-            if (slotResult._item == null)
+            if (!TryPipe())
             {
-                Instantiate(_inventory.GetEmptyItem(), slotResult.transform);
-                slotResult._item = _itemExtraction;
+                if (slotResult._item == null)
+                {
+                    Instantiate(_inventory.GetEmptyItem(), slotResult.transform);
+                    slotResult._item = _itemExtraction;
+                }
+                sliderExtraction.value = 0;
+                slotResult._quantity++;
+                slotResult.GetComponentInChildren<ItemUI>().SetItem(slotResult);  
             }
-            sliderExtraction.value = 0;
-            slotResult._quantity++;
-            slotResult.GetComponentInChildren<ItemUI>().SetItem(slotResult);
         }
         sliderExtraction.value = Mathf.Min(sliderExtraction.maxValue, sliderExtraction.value + Time.deltaTime);
         sliderFuel.value = Mathf.Max(0, sliderFuel.value - Time.deltaTime);
@@ -296,16 +299,7 @@ public class Building : MonoBehaviour
         {
             if (building._isChest)
             {
-                InventorySlot slot = building._interfaceBuild.GetComponentInChildren<InventorySlot>();
-                print(slot);
-                if (slot._item == null)
-                {
-                    GameObject obj = Instantiate(_inventory.GetEmptyItem(), slot.transform);
-                    slot._item = _furnace.GetSlotOre()._item._ressourceCook;
-                    print(obj);
-                }
-                slot._quantity++;
-                slot.GetComponentInChildren<ItemUI>().SetItem(slot);
+                _inventory.AddItemInChest(_furnace.GetSlotOre()._item._ressourceCook, 1, building._interfaceBuild);
                 return true;
             }
         }
@@ -313,13 +307,40 @@ public class Building : MonoBehaviour
         {
             if (building._isFurnace)
             {
-                
+                if (_itemExtraction ._itemName == "Coal" && (building._furnace.GetSlotFuel()._item  == null  ||
+                      building._furnace.GetSlotFuel()._quantity < building._furnace.GetSlotFuel()._item._maxStack))
+                {
+                    InstantiateSlot(building, building._furnace.GetSlotFuel(), _itemExtraction);
+                    _extractor.GetSliderExtraction().value = 0;
+                    return true;
+                }
+                else if (_itemExtraction ._itemName != "Coal" && building._furnace.GetSlotOre()._item == null || _itemExtraction == building._furnace.GetSlotOre()._item && 
+                         building._furnace.GetSlotOre()._quantity < building._furnace.GetSlotOre()._item._maxStack)
+                {
+                    InstantiateSlot(building, building._furnace.GetSlotOre(), _itemExtraction);
+                    _extractor.GetSliderExtraction().value = 0;
+                    return true;
+                }
+                return false;
             }
             else if (building._isChest)
             {
-                
+                _inventory.AddItemInChest(_itemExtraction, 1, building._interfaceBuild);
+                _extractor.GetSliderExtraction().value = 0;
+                return true;
             }
         }
         return false;
+    }
+
+    private void InstantiateSlot(Building building, InventorySlot slot, Item item)
+    {
+        if (slot._item == null)
+        {
+            GameObject obj = Instantiate(_inventory.GetEmptyItem(), slot.transform);
+            slot._item = item;
+        }
+        slot._quantity++;
+        slot.GetComponentInChildren<ItemUI>().SetItem(slot);
     }
 }

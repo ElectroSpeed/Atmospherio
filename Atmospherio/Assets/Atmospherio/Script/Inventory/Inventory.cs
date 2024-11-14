@@ -66,6 +66,7 @@ public class Inventory : MonoBehaviour
                 return true;
             }
         }
+        return false;
     }
 
     public void AddItem(Item item, int quantity)
