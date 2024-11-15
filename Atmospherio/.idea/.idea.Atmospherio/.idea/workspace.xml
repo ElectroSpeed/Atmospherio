@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f935ae3e-9cef-4ce8-8bd5-ff80445d68da" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Atmospherio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Atmospherio/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/DragAndDropItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/DragAndDropItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockCoal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockCoal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockCopper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockCopper.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockIron.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockIron.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockSand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockSand.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockStone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockStone.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Chest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Coal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Coal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/CopperOre.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/CopperOre.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Extractor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Extractor.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Slot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Slot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/_Chest_.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/_Chest_.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Scenes/Building.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Scenes/Building.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Ui/Description.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Ui/Description.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/OxyBulle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/OxyBulle.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +30,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.codeium.enabled": "true",
-    "git-widget-placeholder": "FixBug",
+    "git-widget-placeholder": "dev",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
