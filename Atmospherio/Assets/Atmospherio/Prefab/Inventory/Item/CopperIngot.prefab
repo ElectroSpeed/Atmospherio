@@ -90,7 +90,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: -937601004, guid: 5a92b3c0ca17d194b9ab46aad2763f21, type: 3}
   _itemName: CopperIngot
-  _itemDescription: 
+  _itemDescription: CopperIngot \n ------------------------------ \nCan be used in
+    the forge
   _itemBuilding: {fileID: 0}
   _maxStack: 64
-  _count: 0
+  _ressourceCook: {fileID: 0}
+  _timeCook: 0

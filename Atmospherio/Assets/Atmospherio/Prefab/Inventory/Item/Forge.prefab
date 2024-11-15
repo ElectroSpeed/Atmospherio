@@ -90,7 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: 0}
   _itemName: Forge
-  _itemDescription: 
+  _itemDescription: Forge \n ------------------------------ \nCan be placed on the
+    map
   _itemBuilding: {fileID: 1937855980842610565, guid: 264be87903fb34945bd9204412f0685a, type: 3}
   _maxStack: 16
   _ressourceCook: {fileID: 0}

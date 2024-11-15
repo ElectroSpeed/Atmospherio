@@ -90,7 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: 1124597866, guid: 9ca9133e181f71841ae6ee8381530f70, type: 3}
   _itemName: CopperOre
-  _itemDescription: 
+  _itemDescription: CopperOre \n ------------------------------ \nCan be melted in
+    the furnace
   _itemBuilding: {fileID: 0}
   _maxStack: 64
   _ressourceCook: {fileID: 7774188558216008190, guid: f56dff9678c89564db7a9cbd4650122d, type: 3}

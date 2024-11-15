@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,12 +9,14 @@ public class Description : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private float _timer;
     private Transform _parent;
     private Transform _transform;
+    private InventorySlot _slot;
     
     [SerializeField] private float _timeToDisplay;
     [SerializeField] private GameObject _uiDescription;
     private void Awake()
     {
         _transform = transform;
+        _slot = GetComponent<InventorySlot>();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -23,23 +26,26 @@ public class Description : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        print("Exit");
         _isEnter = false;
         if (_uiDescription != null)
             _uiDescription.SetActive(false);
     }
-    
-    public void SetUiDescription(GameObject uiDescription) => _uiDescription = uiDescription;
+
+    public void SetUiDescription(GameObject uiDescription)
+    {
+        _uiDescription = uiDescription;
+         TextMeshProUGUI text = _uiDescription.GetComponentInChildren<TextMeshProUGUI>();
+         text.text = _slot._item._itemDescription;
+    } 
     private void Update()
     {
-        if (!_isEnter || _uiDescription == null) return;
+        if (!_isEnter || _uiDescription == null || _slot._item == null) return;
 
         if (_timer >= _timeToDisplay && !_uiDescription.activeSelf)
         {
             _uiDescription.transform.position = _mousePos;
             _parent = _uiDescription.transform.parent;
             _uiDescription.transform.SetParent(_transform.root);
-            print("True");
             _uiDescription.SetActive(true);
         }
         if (Vector3.Distance(_mousePos, Input.mousePosition) > 0.1f)
@@ -49,7 +55,6 @@ public class Description : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             if (!_uiDescription.activeSelf)
                 return;
             _uiDescription.transform.SetParent(_parent);
-            print("False");
             _uiDescription.SetActive(false);
         }
         else

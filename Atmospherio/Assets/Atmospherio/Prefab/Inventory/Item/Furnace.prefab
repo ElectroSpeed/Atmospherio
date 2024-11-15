@@ -90,7 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: 21300000, guid: ff970597025d22441869151de308e93c, type: 3}
   _itemName: Furnace
-  _itemDescription: 
+  _itemDescription: Furnace \n ------------------------------ \nCan be placed on
+    the map
   _itemBuilding: {fileID: 6556699169188264438, guid: b51291baa9b741c46a7d6d3934349747, type: 3}
   _maxStack: 64
   _ressourceCook: {fileID: 0}

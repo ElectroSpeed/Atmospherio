@@ -90,7 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: 515138367, guid: 8821f5be6fae8ff4caaa67a7ab6eee71, type: 3}
   _itemName: Sand
-  _itemDescription: 
+  _itemDescription: Sand \n ------------------------------ \nCan be melted in the
+    furnace
   _itemBuilding: {fileID: 0}
   _maxStack: 64
   _ressourceCook: {fileID: 7774188558216008190, guid: 217e7e3d0a19aa546bc51622a06cab00, type: 3}

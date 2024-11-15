@@ -90,7 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: -832993977, guid: 0744b7b22a8344045aa00e16985d37b2, type: 3}
   _itemName: Glass
-  _itemDescription: 
+  _itemDescription: Glass \n------------------------------ \nCan be used for crafting
   _itemBuilding: {fileID: 0}
   _maxStack: 64
-  _count: 0
+  _ressourceCook: {fileID: 0}
+  _timeCook: 0

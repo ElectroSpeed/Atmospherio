@@ -123,7 +123,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: -142077563, guid: bf32f1a0f39c43d409872ec0fd68a42d, type: 3}
   _itemName: Coal
-  _itemDescription: 
+  _itemDescription: Coal \n ------------------------------ \nServes as fuel for the
+    extractor and the furnace
   _itemBuilding: {fileID: 0}
-  _maxStack: 32
-  _count: 0
+  _maxStack: 64
+  _ressourceCook: {fileID: 0}
+  _timeCook: 0

@@ -90,7 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: 21300000, guid: f613dcbbceb710b4795987552158ce8c, type: 3}
   _itemName: Pipe
-  _itemDescription: 
+  _itemDescription: Pipe \n ------------------------------ \nCan be placed on the
+    map
   _itemBuilding: {fileID: 6556699169188264438, guid: 0a3950c6711dfa842a4e9b40bb44f08d, type: 3}
   _maxStack: 64
   _ressourceCook: {fileID: 0}

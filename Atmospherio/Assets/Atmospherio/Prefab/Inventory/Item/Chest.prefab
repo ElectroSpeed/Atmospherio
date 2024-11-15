@@ -90,7 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: 0}
   _itemName: Chest
-  _itemDescription: 
+  _itemDescription: Chest \n ------------------------------ \nCan be placed on the
+    map
   _itemBuilding: {fileID: 1937855980842610565, guid: 66f4e34cef6958244b18a52a47469de4, type: 3}
   _maxStack: 16
   _ressourceCook: {fileID: 0}

@@ -123,7 +123,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: -101447130, guid: 9e0e6c5447b1c184499c2683ca9b1317, type: 3}
   _itemName: IronOre
-  _itemDescription: 
+  _itemDescription: IronOre \n ------------------------------ \nCan be melted in
+    the furnace
   _itemBuilding: {fileID: 0}
   _maxStack: 64
   _ressourceCook: {fileID: 7774188558216008190, guid: d9842f672d1bf18479cc126711cf91eb, type: 3}
