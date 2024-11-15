@@ -94,7 +94,6 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
             if (totalQuantity <= _itemUI._item._maxStack)
             {
-                Debug.Log("Oki mon Lulu");
                 _itemUI._count = totalQuantity;
                 targetSlot._quantity = totalQuantity;
                 ItemUI item = targetSlot.transform.GetChild(0).GetComponent<ItemUI>();

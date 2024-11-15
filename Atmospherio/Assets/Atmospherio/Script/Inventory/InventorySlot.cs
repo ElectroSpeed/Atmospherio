@@ -16,6 +16,7 @@ public class InventorySlot : MonoBehaviour
     {
         _item = itemUI._item;
         _quantity = itemUI._count;
+        itemUI.SetItem(this);
     }
 
     public bool IsFull()
