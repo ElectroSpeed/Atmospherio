@@ -91,7 +91,7 @@ MonoBehaviour:
   _icon: {fileID: 0}
   _itemName: Forge
   _itemDescription: 
-  _itemBuilding: {fileID: 0}
+  _itemBuilding: {fileID: 1937855980842610565, guid: 264be87903fb34945bd9204412f0685a, type: 3}
   _maxStack: 16
   _ressourceCook: {fileID: 0}
   _timeCook: 0

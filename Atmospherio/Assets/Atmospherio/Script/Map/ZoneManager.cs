@@ -33,7 +33,7 @@ public class ZoneManager : MonoBehaviour
     public void UpgradeZone(int number)
     {
         _levelZone += number;
-        _transform.localScale = (_levelZone + 1) * 10 * Vector3.one;
+        _transform.localScale = _levelZone * 20 * Vector3.one;
         _light.intensity = _transform.localScale.x * 200f;
     }
 
