@@ -229,6 +229,56 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Any",
+            "id": "0e1166b2-65cb-42ea-9a22-108d3ff90982",
+            "actions": [
+                {
+                    "name": "Any",
+                    "type": "Button",
+                    "id": "6696543c-b36d-42c1-b9e7-8299f6e40690",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "39b1ee2b-9c74-47af-b2e8-718f03262fa4",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Any",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "932006ce-35c1-41db-b679-3aa3a3646c81",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Any",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ecf6c697-11e2-41a8-b66d-e7e4f73e0981",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Any",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
