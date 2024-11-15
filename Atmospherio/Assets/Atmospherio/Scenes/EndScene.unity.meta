@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Atmospherio/Assets/Atmospherio/Scenes/EndScene.unity.meta
 guid: fc61d92783ba95b47b20692963a52656
 DefaultImporter:
+========
+guid: 1cf7759a29df7b24493f150137a3e62b
+NativeFormatImporter:
+>>>>>>>> Ui:Atmospherio/Assets/Atmospherio/Material/Sprite Lit.mat.meta
   externalObjects: {}
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
