@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Electro-Menu-Package/Scene/TemplateMainMenu.unity
     guid: 2fd6ede20d1bd95429c6d9c2c88ede66
   - enabled: 1
-    path: Assets/Electro-Menu-Package/Scene/TemplateGameMenu.unity
-    guid: b3b11ec91ad4e9645a5e2bdc3445faf2
+    path: Assets/Atmospherio/Scenes/Building.unity
+    guid: 243b201b467bb6443bb623abde9b0352
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -146,21 +146,20 @@ public class Inventory : MonoBehaviour
     {
         for (int i = _slots.Count - 1; i >= 0 && quantity > 0; i--)
         {
-            if (_slots[i]._item == item)
+            if (_slots[i]._item == null || _slots[i]._item._itemName != item._itemName)
+                continue;
+            ItemUI childItem = _slots[i].transform.GetChild(0).GetComponent<ItemUI>();
+            if (_slots[i]._quantity <= quantity)
             {
-                ItemUI childItem = _slots[i].transform.GetChild(0).GetComponent<ItemUI>();
-                if (_slots[i]._quantity <= quantity)
-                {
-                    quantity -= _slots[i]._quantity;
-                    _slots[i].ResetSlot();
-                    Destroy(childItem.gameObject);
-                }
-                else
-                {
-                    _slots[i]._quantity -= quantity;
-                    childItem.SetItem(_slots[i]);
-                    quantity = 0;
-                }
+                quantity -= _slots[i]._quantity;
+                _slots[i].ResetSlot();
+                Destroy(childItem.gameObject);
+            }
+            else
+            {
+                _slots[i]._quantity -= quantity;
+                childItem.SetItem(_slots[i]);
+                quantity = 0;
             }
         }
     }

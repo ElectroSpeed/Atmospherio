@@ -183,14 +183,12 @@ public class Building : MonoBehaviour
                 slotFuel._quantity--;
                 slotFuel.GetComponentInChildren<ItemUI>().SetItem(slotFuel);
 
-                if (slotFuel._quantity > 0)
-                {
-                    sliderFuel.value = _timeToConsumeFuel;
-                }
-                else
+                if (slotFuel._quantity <= 0)
                 {
                     slotFuel._item = null;
+                    Destroy(slotFuel.transform.GetChild(0).gameObject);
                 }
+                sliderFuel.value = _timeToConsumeFuel;
             }
         }
 

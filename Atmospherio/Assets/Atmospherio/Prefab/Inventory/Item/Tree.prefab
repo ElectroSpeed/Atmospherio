@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: 21300000, guid: 634eef98bb7f496419445e997d8da38c, type: 3}
   _itemName: Wood
-  _itemDescription: 
+  _itemDescription: Wood \n ------------------------------ \nCan be used for crafting
   _itemBuilding: {fileID: 0}
   _maxStack: 64
   _ressourceCook: {fileID: 0}

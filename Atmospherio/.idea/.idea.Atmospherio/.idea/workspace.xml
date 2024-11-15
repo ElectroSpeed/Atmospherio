@@ -5,7 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f935ae3e-9cef-4ce8-8bd5-ff80445d68da" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Atmospherio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Atmospherio/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Chest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Forge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Forge.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/OxyBulle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/OxyBulle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Pipe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Pipe.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockCopper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockCopper.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Chest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Coal.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Coal.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/CopperOre.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/CopperOre.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Extractor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Extractor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Forge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Forge.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/IronOre.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/IronOre.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Pipe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Pipe.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Sand.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Sand.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Stone.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Stone.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Wood.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Wood.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/OxyBulle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/OxyBulle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/__Inventory__.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/__Inventory__.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Map/Tree.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Map/Tree.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Scenes/Building.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Scenes/Building.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Inventory/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Inventory/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Player/DetectBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Player/DetectBlock.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,19 +54,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "dev",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Unity.exe" />

@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a540534d63e514882a8606594fdc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: d9baab22adf88d94693f13ef8ac74342, type: 3}
   _itemName: Chest
   _itemDescription: Chest \n ------------------------------ \nCan be placed on the
     map

@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a540534d63e514882a8606594fdc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 1953267022, guid: 282fa0d5ee0ba5c478c72a7c8e276dae, type: 3}
+  _icon: {fileID: 2009128554, guid: 65354b7de75ff654db9b034c7fa46223, type: 3}
   _itemName: Extractor
   _itemDescription: Extractor \n  ------------------------------ \nCan be placed
     on ores
