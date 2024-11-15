@@ -94,15 +94,32 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
             if (totalQuantity <= _itemUI._item._maxStack)
             {
-                _itemUI._count = totalQuantity;
                 targetSlot._quantity = totalQuantity;
+                _itemUI._count = totalQuantity;
                 ItemUI item = targetSlot.transform.GetChild(0).GetComponent<ItemUI>();
                 item.SetItem(targetSlot);
                 Destroy(_itemUI.gameObject);
             }
             else
             {
-                SwitchSlot(baseSlot, targetSlot);
+                if (_itemUI._count == _itemUI._item._maxStack || targetSlot._quantity == targetSlot._item._maxStack)
+                {
+                    SwitchSlot(baseSlot, targetSlot);
+                }
+                else
+                {
+                    targetSlot._quantity = targetSlot._item._maxStack;
+                    int surplusQuantity = totalQuantity - targetSlot._item._maxStack;
+
+                    _itemUI._count = surplusQuantity;
+                    baseSlot._quantity = surplusQuantity;
+
+                    ItemUI targetItem = targetSlot.transform.GetChild(0).GetComponent<ItemUI>();
+                    targetItem.SetItem(targetSlot);
+
+                    ItemUI baseItem = baseSlot.transform.GetChild(0).GetComponent<ItemUI>();
+                    baseItem.SetItem(baseSlot);
+                }
             }
         }
         else
@@ -110,6 +127,7 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             SwitchSlot(baseSlot, targetSlot);
         }
     }
+
 
     private void SwitchSlot(InventorySlot baseSlot, InventorySlot targetSlot)
     {
