@@ -3923,7 +3923,7 @@ MonoBehaviour:
   _componentCraftList:
   - _itemComponentCraft: {fileID: 7774188558216008190, guid: 2166f550f62acc24bb876c80a794e873, type: 3}
     _quantityComponentCraft: 5
-  - _itemComponentCraft: {fileID: 7774188558216008190, guid: fa56ef310d396294885894458956967d, type: 3}
+  - _itemComponentCraft: {fileID: 6350753520894334532, guid: 64f4117dd76862047a33e742dd6bb231, type: 3}
     _quantityComponentCraft: 10
   _componentCraftText:
   - {fileID: 591955873996567069}
@@ -4084,9 +4084,9 @@ MonoBehaviour:
   _componentCraftList:
   - _itemComponentCraft: {fileID: 7774188558216008190, guid: 2166f550f62acc24bb876c80a794e873, type: 3}
     _quantityComponentCraft: 100
-  - _itemComponentCraft: {fileID: 7774188558216008190, guid: fa56ef310d396294885894458956967d, type: 3}
+  - _itemComponentCraft: {fileID: 6350753520894334532, guid: 64f4117dd76862047a33e742dd6bb231, type: 3}
     _quantityComponentCraft: 150
-  - _itemComponentCraft: {fileID: 7774188558216008190, guid: c16fcd8fb5406c044bd2eab69da20195, type: 3}
+  - _itemComponentCraft: {fileID: 7887498762070501492, guid: a4386e59f28f1f94594861dfb0c83b30, type: 3}
     _quantityComponentCraft: 75
   - _itemComponentCraft: {fileID: 7774188558216008190, guid: 41e08ad8774da2347ac26b231a46e45f, type: 3}
     _quantityComponentCraft: 50
@@ -4957,9 +4957,9 @@ MonoBehaviour:
   _componentCraftList:
   - _itemComponentCraft: {fileID: 7774188558216008190, guid: 2166f550f62acc24bb876c80a794e873, type: 3}
     _quantityComponentCraft: 15
-  - _itemComponentCraft: {fileID: 7774188558216008190, guid: fa56ef310d396294885894458956967d, type: 3}
+  - _itemComponentCraft: {fileID: 6350753520894334532, guid: 64f4117dd76862047a33e742dd6bb231, type: 3}
     _quantityComponentCraft: 25
-  - _itemComponentCraft: {fileID: 7774188558216008190, guid: c16fcd8fb5406c044bd2eab69da20195, type: 3}
+  - _itemComponentCraft: {fileID: 7887498762070501492, guid: a4386e59f28f1f94594861dfb0c83b30, type: 3}
     _quantityComponentCraft: 5
   _componentCraftText:
   - {fileID: 3364785981756255623}
@@ -5618,7 +5618,7 @@ MonoBehaviour:
   _componentCraftList:
   - _itemComponentCraft: {fileID: 7774188558216008190, guid: 2166f550f62acc24bb876c80a794e873, type: 3}
     _quantityComponentCraft: 50
-  - _itemComponentCraft: {fileID: 7774188558216008190, guid: fa56ef310d396294885894458956967d, type: 3}
+  - _itemComponentCraft: {fileID: 6350753520894334532, guid: 64f4117dd76862047a33e742dd6bb231, type: 3}
     _quantityComponentCraft: 75
   - _itemComponentCraft: {fileID: 7774188558216008190, guid: 74acdf72f26723847a10095fd1abf2b8, type: 3}
     _quantityComponentCraft: 25

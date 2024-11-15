@@ -41,14 +41,8 @@ public class DetectBlock : MonoBehaviour
             else
             {
                 posSelect.gameObject.SetActive(true);
-                if (hit.collider.gameObject.layer == 7 && (!hit.collider.GetComponent<Building>()._isChest && !hit.collider.GetComponent<Building>()._isFurnace && !hit.collider.GetComponent<Building>()._isExtraction))
-                {
-                    posSelect.position = new Vector3(hit.collider.transform.position.x, 1.5f, hit.collider.transform.position.z);
-                }
-                else
-                    posSelect.position =  new Vector3(hit.collider.transform.position.x, 0.5f, hit.collider.transform.position.z);
+                posSelect.position =  new Vector3(hit.collider.transform.position.x, 0.5f, hit.collider.transform.position.z);
             }
-            
             _blockSelect = hit.collider.gameObject;
         }
     }

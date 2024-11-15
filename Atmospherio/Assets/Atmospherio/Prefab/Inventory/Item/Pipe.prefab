@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a540534d63e514882a8606594fdc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 21300000, guid: f613dcbbceb710b4795987552158ce8c, type: 3}
+  _icon: {fileID: 21300000, guid: e9d06b01bba58b9439265ec0046469af, type: 3}
   _itemName: Pipe
   _itemDescription: Pipe \n ------------------------------ \nCan be placed on the
     map

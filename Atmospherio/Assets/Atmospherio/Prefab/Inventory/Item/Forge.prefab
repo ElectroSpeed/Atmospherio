@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a540534d63e514882a8606594fdc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _icon: {fileID: 0}
+  _icon: {fileID: 21300000, guid: 5c1ac9b349b513e45a50d3b35b5197bd, type: 3}
   _itemName: Forge
   _itemDescription: Forge \n ------------------------------ \nCan be placed on the
     map
