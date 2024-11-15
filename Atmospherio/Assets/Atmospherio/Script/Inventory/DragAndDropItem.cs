@@ -117,8 +117,9 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                     ItemUI targetItem = targetSlot.transform.GetChild(0).GetComponent<ItemUI>();
                     targetItem.SetItem(targetSlot);
 
-                    ItemUI baseItem = baseSlot.transform.GetChild(0).GetComponent<ItemUI>();
-                    baseItem.SetItem(baseSlot);
+                    _itemUI.transform.parent = baseSlot.transform;
+                    _itemUI.transform.position = baseSlot.transform.position;
+                    baseSlot.SetSlot(_itemUI);
                 }
             }
         }

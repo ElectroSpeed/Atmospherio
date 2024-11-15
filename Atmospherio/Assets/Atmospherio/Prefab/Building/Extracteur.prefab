@@ -70,7 +70,7 @@ MonoBehaviour:
   _isExtraction: 1
   _isFurnace: 0
   _isForge: 0
-  _timeConsumption: 0.1
+  _timeConsumption: 2
   _timeToConsumeFuel: 10
   _buildingUI: {fileID: 4309560238381041099, guid: fb41e7cf3f4cc4d419962c6ae0180fd1, type: 3}
   _inventory: {fileID: 0}

@@ -212,12 +212,19 @@ public class Building : MonoBehaviour
 
     private bool TryExtractRessource()
     {
+        if(_extractor.GetSlotResult()._item != _itemExtraction && _extractor.GetSlotResult()._item != null)
+        {
+            _extractor.ResetSliderExtraction();
+            _extractor.GetSliderFuel().value -= Time.deltaTime;
+            return false;
+        }
         if (_extractor.GetSlotFuel()._item == null || _extractor.GetSlotFuel()._item._itemName != "Coal")
         {
             _extractor.GetSliderFuel().value -= Time.deltaTime;
             if (_extractor.GetSliderFuel().value <= 0 || _extractor.GetSlotResult()._quantity == _extractor.GetSlotResult()._item._maxStack)
             {
                 _extractor.ResetSliderExtraction();
+                _extractor.GetSliderFuel().value -= Time.deltaTime;
                 return false;
             }
             else
@@ -231,6 +238,7 @@ public class Building : MonoBehaviour
             if(_extractor.GetSlotResult()._item != null && _extractor.GetSlotResult()._quantity == _extractor.GetSlotResult()._item._maxStack)
             {
                 _extractor.ResetSliderExtraction();
+                _extractor.GetSliderFuel().value -= Time.deltaTime;
                 return false;
             }
             else
@@ -284,6 +292,7 @@ public class Building : MonoBehaviour
             if (_furnace.GetSliderFuel().value <= 0)
             {
                 _furnace.ResetSliderCook();
+                _furnace.GetSliderFuel().value -= Time.deltaTime;
             }
             else if (_furnace.GetSlotOre()._item != null && _furnace.GetSlotOre()._item._timeCook != 0)
             {
@@ -293,6 +302,7 @@ public class Building : MonoBehaviour
             else
             {
                 _furnace.ResetSliderCook();
+                _furnace.GetSliderFuel().value -= Time.deltaTime;
                 return false; 
             }
         }
