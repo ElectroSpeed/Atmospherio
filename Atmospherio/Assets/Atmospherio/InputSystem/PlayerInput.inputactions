@@ -53,7 +53,7 @@
                 {
                     "name": "Inventory",
                     "type": "Button",
-                    "id": "5edc5c84-c02a-4822-8deb-9024bb52975f",
+                    "id": "e6aadd50-6d42-420a-9a51-2d79a4942b9c",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -239,62 +239,12 @@
                 },
                 {
                     "name": "",
-                    "id": "eec98044-eddc-4273-9a34-26bf9437a91a",
+                    "id": "d9682687-41d7-45ab-858f-7144d63b872c",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Inventory",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Any",
-            "id": "0e1166b2-65cb-42ea-9a22-108d3ff90982",
-            "actions": [
-                {
-                    "name": "Any",
-                    "type": "Button",
-                    "id": "6696543c-b36d-42c1-b9e7-8299f6e40690",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "39b1ee2b-9c74-47af-b2e8-718f03262fa4",
-                    "path": "<Keyboard>/anyKey",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Any",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "932006ce-35c1-41db-b679-3aa3a3646c81",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Any",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ecf6c697-11e2-41a8-b66d-e7e4f73e0981",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Any",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
