@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Atmospherio/Scenes/Building.unity
     guid: 243b201b467bb6443bb623abde9b0352
+  - enabled: 1
+    path: Assets/Atmospherio/Scenes/EndScene.unity
+    guid: fc61d92783ba95b47b20692963a52656
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

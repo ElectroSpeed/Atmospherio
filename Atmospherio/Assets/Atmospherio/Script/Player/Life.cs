@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Life : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class Life : MonoBehaviour
         if (_life < 0)
         {
             _life = 0;
-            Debug.Log("Dead");
+            SceneManager.LoadScene("EndScene");
         }
 
         SetTextLife();
