@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BuildingManager : MonoBehaviour
 {
@@ -12,11 +13,14 @@ public class BuildingManager : MonoBehaviour
         Instance = this;
         _collisionDetectionSelect = _detectBlock.GetComponentInChildren<CollisionDetectionSelect>();
     }
+    private bool IsMouseOverUI() {
+        return EventSystem.current.IsPointerOverGameObject();
+    }
 
     public bool SpawnBuilding(Item itemToBuild)
     {
         Item item = _detectBlock._blockSelect.GetComponent<Item>();
-        if ((itemToBuild._itemName == "Extractor" && item == null) || _collisionDetectionSelect._collisionEnter || itemToBuild._itemBuilding == null)
+        if ((itemToBuild._itemName == "Extractor" && item == null) || _collisionDetectionSelect._collisionEnter || itemToBuild._itemBuilding == null || IsMouseOverUI())
         {
             return false;
         }

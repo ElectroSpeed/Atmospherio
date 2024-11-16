@@ -31,6 +31,7 @@ public class BuildingCustomEditor : Editor
         SerializeProperty("_interfaceBuild");
         SerializeProperty("_isChest");
         SerializeProperty("_isForge");
+        SerializeProperty("_itemBuilding");
         serializedObject.ApplyModifiedProperties();
     }
     private void SerializeProperty(string variable)
@@ -53,8 +54,10 @@ public class Building : MonoBehaviour
     [HideInInspector] public Inventory _inventory;
     [HideInInspector] public GameObject _interfaceBuild;
     [HideInInspector] public bool _isChest;
+    [HideInInspector] public Item _itemBuilding;
     
     [NonSerialized] public Item _itemExtraction;
+    
 
     private Furnace _furnace;
     private Extractor _extractor;

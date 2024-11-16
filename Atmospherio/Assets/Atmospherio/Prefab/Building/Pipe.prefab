@@ -146,6 +146,7 @@ MonoBehaviour:
   _inventory: {fileID: 0}
   _interfaceBuild: {fileID: 0}
   _isChest: 0
+  _itemBuilding: {fileID: 7774188558216008190, guid: ae2bcd624f90747449bf0281c97da2c5, type: 3}
   _isPiped: 0
   _pipeConnected: {fileID: 0}
 --- !u!54 &2422691169252001809

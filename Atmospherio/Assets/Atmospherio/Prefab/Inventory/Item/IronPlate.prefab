@@ -90,7 +90,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: -849858476, guid: 59b12e8e89e17b64591f922182a26fa6, type: 3}
   _itemName: IronPlate
-  _itemDescription: 
+  _itemDescription: IronPlate \n ------------------------------ \nCan be used to
+    improve oxyBulle
   _itemBuilding: {fileID: 0}
   _maxStack: 64
-  _count: 0
+  _ressourceCook: {fileID: 0}
+  _timeCook: 0

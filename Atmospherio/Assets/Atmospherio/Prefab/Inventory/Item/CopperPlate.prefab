@@ -90,7 +90,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: -1259100777, guid: 1141b44cbd3b58b48adca22a72978a4e, type: 3}
   _itemName: CopperPlate
-  _itemDescription: 
+  _itemDescription: CopperPlate \n ------------------------------ \nCan be used to
+    improve oxyBulle
   _itemBuilding: {fileID: 0}
   _maxStack: 64
-  _count: 0
+  _ressourceCook: {fileID: 0}
+  _timeCook: 0

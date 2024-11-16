@@ -48,13 +48,38 @@ public class Mining : MonoBehaviour
             _isMining = false;
         }
     }
+    public void LeftClick(InputAction.CallbackContext ctx)
+    {
+        _currentBlock = DetectBlock.Instance._blockSelect;
+        if (_currentBlock == null || !_currentBlock.CompareTag("Build"))
+            return;
+
+        if (Vector3.Distance(_currentBlock.transform.position, gameObject.transform.position) > _distanceToPlayer)
+            return;
+        
+        if (_currentBlock.GetComponent<Building>()._itemBuilding == null) 
+            return;
+
+        if (ctx.performed)
+        {
+            _sliderMining.gameObject.SetActive(true);
+            _isMining = true;
+        }
+        else if (ctx.canceled)
+        {
+            _sliderMining.gameObject.SetActive(false);
+            _currentTimeMining = 0;
+            _isMining = false;
+        }
+    }
+
 
     private void Update()
     {
         if (!_isMining || _currentBlock == null)
             return;
 
-        if (!_currentBlock.CompareTag("Resource") || _currentBlock != DetectBlock.Instance._blockSelect)
+        if (!_currentBlock.CompareTag("Resource") && !_currentBlock.CompareTag("Build") || _currentBlock != DetectBlock.Instance._blockSelect)
         {
             _currentTimeMining = 0;
             _sliderMining.gameObject.SetActive(false);
@@ -67,9 +92,21 @@ public class Mining : MonoBehaviour
 
         if (_currentTimeMining <= _timeMining)
             return;
-
-        _inventory.AddItem(_currentBlock.GetComponent<Item>(), 1);
-        _currentTimeMining = 0;
-        _sliderMining.value = _currentTimeMining;
+        if (_currentBlock.CompareTag("Resource"))
+        {
+            _inventory.AddItem(_currentBlock.GetComponent<Item>(), 1);
+            _currentTimeMining = 0;
+            _sliderMining.value = _currentTimeMining;
+        }
+        else if (_currentBlock.CompareTag("Build") && _currentBlock.GetComponent<Building>()._itemBuilding != null)
+        {
+            Building building = _currentBlock.GetComponent<Building>();
+            _inventory.AddItem(building._itemBuilding, 1);
+            _currentTimeMining = 0;
+            _sliderMining.value = _currentTimeMining;
+            _sliderMining.gameObject.SetActive(false);
+            _isMining = false;
+            Destroy(_currentBlock);
+        }
     }
 }

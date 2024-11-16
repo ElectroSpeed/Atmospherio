@@ -90,7 +90,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _icon: {fileID: 532354760, guid: ee7e769685954b543895d1ed20101992, type: 3}
   _itemName: IronGear
-  _itemDescription: 
+  _itemDescription: IronGear \n ------------------------------ \nCan be used to improve
+    oxyBulle
   _itemBuilding: {fileID: 0}
   _maxStack: 64
-  _count: 0
+  _ressourceCook: {fileID: 0}
+  _timeCook: 0

@@ -69,12 +69,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isExtraction: 0
   _isFurnace: 1
+  _isForge: 0
   _timeConsumption: 2
   _timeToConsumeFuel: 10
   _buildingUI: {fileID: 4309560238381041099, guid: 15d1c175c541b5d41a0d442929902611, type: 3}
   _inventory: {fileID: 0}
   _interfaceBuild: {fileID: 0}
   _isChest: 0
+  _itemBuilding: {fileID: 7774188558216008190, guid: 04bf267c60578f94a8b71e7603f5f0ce, type: 3}
   _isPiped: 0
   _pipeConnected: {fileID: 0}
 --- !u!1 &8131919063569036211

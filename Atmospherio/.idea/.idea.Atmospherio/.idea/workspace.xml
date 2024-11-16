@@ -7,33 +7,19 @@
     <list default="true" id="f935ae3e-9cef-4ce8-8bd5-ff80445d68da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Atmospherio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Atmospherio/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Chest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Extracteur.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Extracteur.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Forge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Forge.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/OxyBulle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/OxyBulle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Furnace.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Furnace.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Pipe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Pipe.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockCopper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/BlockCopper.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Chest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Coal.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Coal.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/CopperOre.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/CopperOre.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Extractor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Extractor.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Forge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Forge.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/IronOre.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/IronOre.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Pipe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Pipe.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Sand.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Sand.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Stone.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Stone.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Wood.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/Wood.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/OxyBulle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/OxyBulle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/__Inventory__.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/__Inventory__.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Map/Tree.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Map/Tree.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/CopperGear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/CopperGear.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/CopperPlate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/CopperPlate.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/IronGear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/IronGear.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/IronPlate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/IronPlate.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Scenes/Building.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Scenes/Building.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Inventory/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Inventory/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Player/DetectBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Player/DetectBlock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Building/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Building/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Building/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Building/BuildingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Player/Mining.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Player/Mining.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +54,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Build/BuildAtmospherio\Atmospherio.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\darpe\OneDrive\Documents\Build\BuildAtmospherio" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\darpe\OneDrive\Documents\GitHub\Atmospherio\Atmospherio -debugCodeOptimization" />
@@ -116,6 +110,7 @@
       <workItem from="1731069761690" duration="624000" />
       <workItem from="1731416900968" duration="7397000" />
       <workItem from="1731501727262" duration="9042000" />
+      <workItem from="1731782824497" duration="1550000" />
     </task>
     <servers />
   </component>
