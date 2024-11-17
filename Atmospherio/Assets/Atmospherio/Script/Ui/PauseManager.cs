@@ -31,6 +31,7 @@ public class PauseManager : MonoBehaviour
             _uiButtons.SetActive(true);
             _uiOptions.SetActive(false);
             _uiPause.SetActive(false);
+            _playerInput.actions.actionMaps[0].Enable();
         }
         else
         {
