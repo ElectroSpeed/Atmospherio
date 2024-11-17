@@ -7,16 +7,16 @@ public class GetButton : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _listButton;
     public PlayerInput _playerInput;
-    [HideInInspector] public List<string> _listControl = new();
-    private List<ChangeControl> _changeControls = new();
+    [HideInInspector] public List<string> _listControl = new List<string>();
+    private readonly List<ChangeControl> _changeControls = new List<ChangeControl>();
     private int _indexButton;
     public static string _text = "99";
     private void Start()
     {
-        for (int i = 0; i < _listButton.Count; i++)
+        foreach (GameObject t in _listButton)
         {
             _listControl.Add("");
-            _changeControls.Add(_listButton[i].GetComponent<ChangeControl>());
+            _changeControls.Add(t.GetComponent<ChangeControl>());
         }
         SetListControl();
     }

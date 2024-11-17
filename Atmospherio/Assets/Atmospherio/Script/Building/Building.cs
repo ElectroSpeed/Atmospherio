@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -62,7 +61,6 @@ public class Building : MonoBehaviour
     private Furnace _furnace;
     private Extractor _extractor;
 
-    public bool _isPiped;
     public GameObject _pipeConnected;
 
     private GameObject _currentUiOpen;
@@ -122,11 +120,8 @@ public class Building : MonoBehaviour
         }
     }
 
-    public void SetPiped(bool piped, GameObject pipe)
+    public void SetPiped(GameObject pipe)
     {
-        if (_isPiped) return;
-        
-        _isPiped = piped;
         _pipeConnected = pipe;
     }
     public void OnPanelExit()
@@ -185,7 +180,7 @@ public class Building : MonoBehaviour
             {
                 slotFuel._quantity--;
                 slotFuel.GetComponentInChildren<ItemUI>().SetItem(slotFuel);
-
+                
                 if (slotFuel._quantity <= 0)
                 {
                     slotFuel._item = null;
@@ -221,8 +216,7 @@ public class Building : MonoBehaviour
         }
         if (_extractor.GetSlotFuel()._item == null || _extractor.GetSlotFuel()._item._itemName != "Coal")
         {
-            _extractor.GetSliderFuel().value -= Time.deltaTime;
-            if (_extractor.GetSliderFuel().value <= 0 || _extractor.GetSlotResult()._quantity == _extractor.GetSlotResult()._item._maxStack)
+            if (_extractor.GetSliderFuel().value <= 0 || _extractor.GetSlotResult()._item != null && _extractor.GetSlotResult()._quantity == _extractor.GetSlotResult()._item._maxStack)
             {
                 _extractor.ResetSliderExtraction();
                 _extractor.GetSliderFuel().value -= Time.deltaTime;
@@ -245,6 +239,7 @@ public class Building : MonoBehaviour
             else
             {
                 ExtractRessource();
+                _extractor.GetSliderFuel().maxValue = _timeToConsumeFuel;
                 Debug.Log("Extract");
                 return true;
             }
@@ -262,9 +257,14 @@ public class Building : MonoBehaviour
 
         if (sliderFuel.value <= 0)
         {
-            sliderFuel.value = _timeToConsumeFuel;
+            sliderFuel.value = sliderFuel.maxValue;
             slotFuel._quantity--;
             slotFuel.GetComponentInChildren<ItemUI>().SetItem(slotFuel);
+            if (slotFuel._quantity <= 0)
+            {
+                slotFuel._item = null;
+                Destroy(slotFuel.transform.GetChild(0).gameObject);
+            }
         }        
         if (sliderExtraction.value >= sliderExtraction.maxValue)
         {
@@ -338,6 +338,7 @@ public class Building : MonoBehaviour
 
         for (int i = 0; i < 9999; i++)
         {
+            print(pipe);
             if (pipe._rightPipe != null && pipe._rightPipe != pipeConnected)
             {
                 pipeConnected = pipe.gameObject;
@@ -350,6 +351,10 @@ public class Building : MonoBehaviour
             else if (pipe._leftPipe != pipeConnected && pipe._leftPipe != null)
             {
                 pipeConnected = pipe.gameObject;
+                if (pipe._leftPipe.GetComponent<Building>() != null)
+                {
+                    return AddWithPipe(pipe._leftPipe.GetComponent<Building>());
+                }
                 pipe = pipe._leftPipe.GetComponent<Pipe>();
             }
             else
@@ -374,6 +379,7 @@ public class Building : MonoBehaviour
         {
             if (building._isFurnace)
             {
+                print("caca");
                 if (_itemExtraction ._itemName == "Coal" && (building._furnace.GetSlotFuel()._item  == null  ||
                       building._furnace.GetSlotFuel()._quantity < building._furnace.GetSlotFuel()._item._maxStack))
                 {

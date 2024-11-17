@@ -7,11 +7,13 @@ public class BuildingManager : MonoBehaviour
 
     public static BuildingManager Instance;
     private CollisionDetectionSelect _collisionDetectionSelect;
+    private float _distanceToBuild;
 
     private void Awake()
     {
         Instance = this;
         _collisionDetectionSelect = _detectBlock.GetComponentInChildren<CollisionDetectionSelect>();
+        _distanceToBuild = _detectBlock.gameObject.GetComponent<Mining>()._distanceToPlayer;
     }
     private bool IsMouseOverUI() {
         return EventSystem.current.IsPointerOverGameObject();
@@ -20,7 +22,9 @@ public class BuildingManager : MonoBehaviour
     public bool SpawnBuilding(Item itemToBuild)
     {
         Item item = _detectBlock._blockSelect.GetComponent<Item>();
-        if ((itemToBuild._itemName == "Extractor" && item == null) || _collisionDetectionSelect._collisionEnter || itemToBuild._itemBuilding == null || IsMouseOverUI())
+        if ((itemToBuild._itemName == "Extractor" && item == null) || _collisionDetectionSelect._collisionEnter || 
+            itemToBuild._itemBuilding == null || IsMouseOverUI() || 
+            Vector3.Distance(_detectBlock._blockSelect.transform.position, _detectBlock.gameObject.transform.position) > _distanceToBuild)
         {
             return false;
         }

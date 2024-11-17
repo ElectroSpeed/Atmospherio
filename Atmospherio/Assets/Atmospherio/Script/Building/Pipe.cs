@@ -18,7 +18,7 @@ public class Pipe : MonoBehaviour
         else if (other.gameObject.layer == 7)
         {
             SetLeftRightPipe(other.transform);
-            other.GetComponent<Building>().SetPiped(true, gameObject);
+            other.GetComponent<Building>().SetPiped(gameObject);
         }
     }
     private void SetLeftRightPipe(Transform other)

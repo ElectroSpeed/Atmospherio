@@ -25,7 +25,7 @@ public class DetectBlock : MonoBehaviour
     {
         SetSelection(_posSelect, _camera);
 
-        _selectSprite.color = Vector3.Distance(_transform.position, _posSelect.position) > _distanceToPlayer ? Color.red : Color.white;
+        _selectSprite.color = Vector3.Distance(_transform.position, _blockSelect.transform.position) > _distanceToPlayer ? Color.red : Color.white;
     }
 
     private void SetSelection(Transform posSelect, Camera camera)

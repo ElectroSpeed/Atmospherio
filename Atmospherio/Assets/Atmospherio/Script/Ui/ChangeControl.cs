@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using System.Linq;
 
 public class ChangeControl : MonoBehaviour
 {
@@ -21,31 +22,28 @@ public class ChangeControl : MonoBehaviour
     public void Change()
     {
         _control = GetButton._text;
-        if (EventSystem.current.currentSelectedGameObject == gameObject)
+        if (EventSystem.current.currentSelectedGameObject != gameObject)
+            return;
+        List<string> list = GetComponentInParent<GetButton>()._listControl;
+        if (list.Any(t => t == "<Keyboard>/" + _control))
         {
-            List<string> list = GetComponentInParent<GetButton>()._listControl;
-            for (int i = 0; i < list.Count; i++)
-            {
-                if (list[i] == "<Keyboard>/" + _control) 
-                    return;
-            }
-            _playerInput.actions.actionMaps[0].actions[_indexAction].ChangeBinding(_indexBinding).WithPath("<Keyboard>/" + _control);
-            ChangeQwerty();
-            GetComponentInChildren<TextMeshProUGUI>().text = _control.ToUpper();
-            GetComponentInParent<GetButton>().SetListControl();
+            return;
         }
+        _playerInput.actions.actionMaps[0].actions[_indexAction].ChangeBinding(_indexBinding).WithPath("<Keyboard>/" + _control);
+        ChangeQwerty();
+        GetComponentInChildren<TextMeshProUGUI>().text = _control.ToUpper();
+        GetComponentInParent<GetButton>().SetListControl();
     }
     private void ChangeQwerty()
     {
-        if (_control == "q")
-            _control = "a";
-        else if (_control == "a")
-            _control = "q";
-        if (_control == "w")
-            _control = "z";
-        else if (_control == "z")
-            _control = "w";
-        if (_control == "semicolon")
-            _control = "m";
+        _control = _control switch
+        {
+            "q" => "a",
+            "a" => "q",
+            "w" => "z",
+            "z" => "w",
+            "semicolon" => "m",
+            _ => _control
+        };
     }
 }

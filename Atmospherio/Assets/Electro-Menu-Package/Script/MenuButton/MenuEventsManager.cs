@@ -1,17 +1,15 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class MenuEventsManager : MonoBehaviour
 {
     public static MenuEventsManager Instance;
     [SerializeField] private TMP_Dropdown _dropdownResolution;
     private Resolution[] _resolutions;
+    [SerializeField] private Toggle _toggleFullScreen;
 
     private void Awake()
     {
@@ -29,6 +27,9 @@ public class MenuEventsManager : MonoBehaviour
         Screen.SetResolution(1920, 1080, true);
         Time.timeScale = 1.0f;
         GetResolution();
+        
+        if (_toggleFullScreen != null)
+            _toggleFullScreen.isOn = Screen.fullScreen;
     }
     public void OnApplicationQuit()
     {
@@ -37,9 +38,9 @@ public class MenuEventsManager : MonoBehaviour
 
     private void GetResolution()
     {
-        _resolutions = Screen.resolutions.Select(_resolutions => new Resolution { width = _resolutions.width, height = _resolutions.height }).Distinct().ToArray();
+        _resolutions = Screen.resolutions.Select(resolutions => new Resolution { width = resolutions.width, height = resolutions.height }).Distinct().ToArray();
         _dropdownResolution.ClearOptions();
-        List<string> options = new();
+        List<string> options = new List<string>();
         int currentResolution = 0;
         for (int i = 0; i < _resolutions.Length; i++)
         {
@@ -92,5 +93,9 @@ public class MenuEventsManager : MonoBehaviour
         {
             menuSection.SetActive(true);
         }
+    }
+    public void SetFullScreen(bool isFullScreen)
+    {
+        Screen.fullScreen = isFullScreen;
     }
 }
