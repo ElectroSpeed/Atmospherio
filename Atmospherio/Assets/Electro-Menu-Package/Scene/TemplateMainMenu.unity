@@ -842,6 +842,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -35.4375
       objectReference: {fileID: 0}
+    - target: {fileID: 1498127378812874873, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
+      propertyPath: m_text
+      value: 'Thomas ESPOSITO
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 1843593568926145460, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
       propertyPath: m_Size
       value: 1
