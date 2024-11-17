@@ -1134,6 +1134,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4335140779731340603, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
+      propertyPath: m_text
+      value: Rotate Pipe
+      objectReference: {fileID: 0}
     - target: {fileID: 5411985198901149954, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
       propertyPath: m_Size
       value: 0.22842164

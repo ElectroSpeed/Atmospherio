@@ -6,19 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f935ae3e-9cef-4ce8-8bd5-ff80445d68da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Atmospherio/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Atmospherio/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Chest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Extracteur.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Extracteur.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Forge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Forge.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Furnace.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Furnace.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Pipe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Building/Pipe.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/CopperGear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/CopperGear.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/CopperPlate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/CopperPlate.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/IronGear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/IronGear.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/IronPlate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Prefab/Inventory/Item/IronPlate.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Scenes/Building.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Scenes/Building.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Building/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Building/Building.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Building/BuildingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Building/BuildingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Player/Mining.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Player/Mining.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Atmospherio/Script/Inventory/InventoryUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Atmospherio/Script/Inventory/InventoryUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Electro-Menu-Package/Scene/TemplateMainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Electro-Menu-Package/Scene/TemplateMainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,6 +101,7 @@
       <workItem from="1731416900968" duration="7397000" />
       <workItem from="1731501727262" duration="9042000" />
       <workItem from="1731782824497" duration="1550000" />
+      <workItem from="1731865491894" duration="1384000" />
     </task>
     <servers />
   </component>

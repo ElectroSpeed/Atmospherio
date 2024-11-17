@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class InventoryUI : MonoBehaviour
@@ -88,5 +89,12 @@ public class InventoryUI : MonoBehaviour
         {
             _inventoryRendersCraft.transform.GetChild(c).gameObject.SetActive(false);
         }
+    }
+    
+    public void OpenInventoryWithE(InputAction.CallbackContext ctx)
+    {
+        if (!ctx.performed || _isOpen) return;
+        
+        _inventoryOpenButton.GetComponents<SpecialButton>()[0]._onClick.Invoke();
     }
 }
