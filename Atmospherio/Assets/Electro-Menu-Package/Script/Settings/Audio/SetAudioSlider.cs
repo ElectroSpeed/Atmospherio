@@ -17,7 +17,7 @@ public class SetAudioSlider : MonoBehaviour
     private void Start()
     {
         _audioSlider = GetComponent<Slider>();
-        ApplyAudioSliderSettings();
+        //ApplyAudioSliderSettings();
     }
 
     private void ApplyAudioSliderSettings()
