@@ -65,6 +65,14 @@ public class MenuEventsManager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(name);
+        if (AudioManager.Instance.IsSoundInList(AudioManager.Instance._musicSounds, name))
+        {
+            AudioManager.Instance.PlayMusic(name);
+        }
+        else
+        {
+            AudioManager.Instance.StopMusic();
+        }
     }
 
     public void PauseScene()

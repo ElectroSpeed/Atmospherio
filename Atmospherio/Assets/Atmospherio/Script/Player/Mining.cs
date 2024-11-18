@@ -43,6 +43,7 @@ public class Mining : MonoBehaviour
         }
         else if (ctx.canceled)
         {
+            AudioManager.Instance.StopSFX();
             _sliderMining.gameObject.SetActive(false);
             _currentTimeMining = 0;
             _isMining = false;
@@ -89,6 +90,11 @@ public class Mining : MonoBehaviour
 
         _currentTimeMining += Time.deltaTime;
         _sliderMining.value = _currentTimeMining;
+
+        if (_currentTimeMining <= 0.1f)
+        {
+            AudioManager.Instance.PlaySFX("Mining");
+        }
 
         if (_currentTimeMining <= _timeMining)
             return;

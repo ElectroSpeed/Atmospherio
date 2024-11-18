@@ -47,7 +47,7 @@ public class CraftItem : MonoBehaviour
         bubbleZone.UpgradeZone(1);
     }
 
-    public bool CanUpgrade(CraftReciepe receipe)
+    public bool CanMake(CraftReciepe receipe)
     {
         return receipe._componentCraftList.All(item => _inventory.CheckNumberItem(item._itemComponentCraft, item._quantityComponentCraft));
     }
