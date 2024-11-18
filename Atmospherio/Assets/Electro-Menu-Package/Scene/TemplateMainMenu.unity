@@ -223,6 +223,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: e6aadd50-6d42-420a-9a51-2d79a4942b9c
     m_ActionName: 'Player/Inventory[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eaad97a0-6156-45d3-b135-05807c62f6db
+    m_ActionName: 'Escape/Escape[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -640,7 +644,7 @@ PrefabInstance:
     - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
       propertyPath: _sfxSounds.Array.data[0]._clip
       value: 
-      objectReference: {fileID: 8300000, guid: 2dfd5db00673bcc4b98096ecd79418dc, type: 3}
+      objectReference: {fileID: 8300000, guid: f59e42cb50e956d4e8e3036b629928a0, type: 3}
     - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
       propertyPath: _sfxSounds.Array.data[0]._name
       value: Button
@@ -664,7 +668,7 @@ PrefabInstance:
     - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
       propertyPath: _sfxSounds.Array.data[3]._clip
       value: 
-      objectReference: {fileID: 8300000, guid: 0dd26aa72c3bf074485bdffd0a26f516, type: 3}
+      objectReference: {fileID: 8300000, guid: 8f09a5211f13bb14c8c97f9b53e83292, type: 3}
     - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
       propertyPath: _sfxSounds.Array.data[3]._name
       value: Mining
