@@ -629,6 +629,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: _sfxSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: _musicSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: _sfxSounds.Array.data[0]._clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dfd5db00673bcc4b98096ecd79418dc, type: 3}
+    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: _sfxSounds.Array.data[0]._name
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: _sfxSounds.Array.data[1]._clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c48c6cc8ac0f394aa8bd0342c392793, type: 3}
+    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: _sfxSounds.Array.data[1]._name
+      value: Upgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: _sfxSounds.Array.data[2]._clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a3ed530be7d8b3448bac7a1b23bb07b8, type: 3}
+    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: _sfxSounds.Array.data[2]._name
+      value: Forge
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: _sfxSounds.Array.data[3]._clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0dd26aa72c3bf074485bdffd0a26f516, type: 3}
+    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: _sfxSounds.Array.data[3]._name
+      value: Mining
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: _sfxSounds.Array.data[4]._clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3a1d837ddb28c9e409188dec31f4887f, type: 3}
+    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: _sfxSounds.Array.data[4]._name
+      value: Error
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: _musicSounds.Array.data[0]._clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 66f80774ba9dc474393cf96a2c6e9efa, type: 3}
+    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: _musicSounds.Array.data[0]._name
+      value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057383784975185611, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7057383784975185611, guid: 093384d343465f241bdf601aeec7db53, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: f1a28c6341fc88c418c3dafdbfc2c74e, type: 3}
     - target: {fileID: 7057383784975185611, guid: 093384d343465f241bdf601aeec7db53, type: 3}
       propertyPath: m_audioClip
       value: 

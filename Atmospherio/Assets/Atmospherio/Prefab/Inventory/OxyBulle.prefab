@@ -246,6 +246,9 @@ MonoBehaviour:
   _onExit:
     m_PersistentCalls:
       m_Calls: []
+  _isCraftButton: 0
+  _isUpgradeButton: 0
+  _isForgeButton: 0
 --- !u!1 &689798577489427717
 GameObject:
   m_ObjectHideFlags: 0
@@ -3962,6 +3965,9 @@ MonoBehaviour:
   _onExit:
     m_PersistentCalls:
       m_Calls: []
+  _isCraftButton: 0
+  _isUpgradeButton: 1
+  _isForgeButton: 0
 --- !u!114 &8324344430712978485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4144,6 +4150,9 @@ MonoBehaviour:
   _onExit:
     m_PersistentCalls:
       m_Calls: []
+  _isCraftButton: 0
+  _isUpgradeButton: 1
+  _isForgeButton: 0
 --- !u!114 &2325708487200781782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5011,6 +5020,9 @@ MonoBehaviour:
   _onExit:
     m_PersistentCalls:
       m_Calls: []
+  _isCraftButton: 0
+  _isUpgradeButton: 1
+  _isForgeButton: 0
 --- !u!114 &8839285908688146191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5675,6 +5687,9 @@ MonoBehaviour:
   _onExit:
     m_PersistentCalls:
       m_Calls: []
+  _isCraftButton: 0
+  _isUpgradeButton: 1
+  _isForgeButton: 0
 --- !u!114 &5486997315459916569
 MonoBehaviour:
   m_ObjectHideFlags: 0

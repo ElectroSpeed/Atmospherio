@@ -24,6 +24,17 @@ public class SpecialButton: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [FormerlySerializedAs("onExit")]
     [SerializeField] private UnityEvent _onExit;
 
+    private CraftItem _craftItem;
+
+    public bool _isCraftButton;
+    public bool _isUpgradeButton;
+    public bool _isForgeButton;
+
+    private void Start()
+    {
+        _craftItem = FindFirstObjectByType<CraftItem>();
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         ButtonInteraction("Enter");
@@ -40,13 +51,50 @@ public class SpecialButton: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         ButtonInteraction("Click");
         _onClick.Invoke();
+        if (_isCraftButton)
+        {
+            if (_craftItem.CanMake(this.gameObject.GetComponent<CraftReciepe>()))
+            {
+                AudioManager.Instance.PlaySFX("Craft");
+            }
+            else
+            {
+                AudioManager.Instance.PlaySFX("Error");
+            }
+        }
+        else if (_isUpgradeButton)
+        {
+            if (_craftItem.CanMake(this.gameObject.GetComponent<CraftReciepe>()))
+            {
+                AudioManager.Instance.PlaySFX("Upgrade");
+            }
+            else
+            {
+                AudioManager.Instance.PlaySFX("Error");
+            }
+        }
+        else if (_isForgeButton)
+        {
+            if (_craftItem.CanMake(this.gameObject.GetComponent<CraftReciepe>()))
+            {
+                AudioManager.Instance.PlaySFX("Forge");
+            }
+            else
+            {
+                AudioManager.Instance.PlaySFX("Error");
+            }
+        }
+        else
+        {
+            AudioManager.Instance.PlaySFX("Button");
+        }
+
     }
 
     private void ButtonInteraction(string interactionType)
     {
         ModifyImages(interactionType);
         ModifyTexts(interactionType);
-
     }
 
     #region ImageModification

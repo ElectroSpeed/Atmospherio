@@ -14,7 +14,7 @@ public class SetButtonUpgrade : MonoBehaviour
         var inventory = FindFirstObjectByType<CraftItem>();
         var receipe = GetComponent<CraftReciepe>();
 
-        if(inventory.CanUpgrade(receipe))
+        if(inventory.CanMake(receipe))
         {
             inventory.UpgradeOxyBulle(receipe);
 
